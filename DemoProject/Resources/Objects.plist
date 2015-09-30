@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>logoName</key>
+		<string>logo1</string>
+		<key>title</key>
+		<string>Hydration</string>
+		<key>description</key>
+		<string>Drink 500 ml of water to reach your goal.</string>
+		<key>percentage</key>
+		<integer>74</integer>
+		<key>color</key>
+		<string>5c91fc</string>
+	</dict>
+	<dict>
+		<key>logoName</key>
+		<string>logo2</string>
+		<key>title</key>
+		<string>Food</string>
+		<key>description</key>
+		<string>300 cal left to your goal. Let yourself a cupcake :3</string>
+		<key>percentage</key>
+		<integer>86</integer>
+		<key>color</key>
+		<string>21caaa</string>
+	</dict>
+	<dict>
+		<key>logoName</key>
+		<string>logo3</string>
+		<key>title</key>
+		<string>Energy</string>
+		<key>description</key>
+		<string>You need to burn 800 cal more. Move it, move it!</string>
+		<key>percentage</key>
+		<integer>58</integer>
+		<key>color</key>
+		<string>FF9800</string>
+	</dict>
+</array>
+</plist>

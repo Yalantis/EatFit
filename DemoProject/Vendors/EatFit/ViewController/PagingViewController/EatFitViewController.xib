@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8191"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EatFitViewController" customModule="EatFit_Demo_Project" customModuleProvider="target">
+            <connections>
+                <outlet property="pageControl" destination="sxg-Sp-QJg" id="za0-VA-aJw"/>
+                <outlet property="pageViewContainer" destination="XaJ-HH-qe8" id="8PP-fT-txn"/>
+                <outlet property="view" destination="iN0-l3-epB" id="gZx-bR-V0o"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaJ-HH-qe8" userLabel="Page View Container">
+                    <rect key="frame" x="0.0" y="27" width="375" height="403"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsW-rD-fJd" userLabel="Bottom View">
+                    <rect key="frame" x="-3" y="430" width="380" height="237"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxg-Sp-QJg" customClass="EatFitPageControl" customModule="EatFit_Demo_Project" customModuleProvider="target">
+                            <rect key="frame" x="90" y="0.0" width="200" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="pfs-hv-QSd"/>
+                                <constraint firstAttribute="width" constant="200" id="sQB-db-28Q"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="sxg-Sp-QJg" secondAttribute="centerX" id="7d7-4w-En2"/>
+                        <constraint firstItem="sxg-Sp-QJg" firstAttribute="top" secondItem="gsW-rD-fJd" secondAttribute="top" id="Hh0-1k-O1a"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="gsW-rD-fJd" firstAttribute="top" secondItem="XaJ-HH-qe8" secondAttribute="bottom" id="7XU-QC-7H1"/>
+                <constraint firstItem="XaJ-HH-qe8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JPG-ek-Ttq"/>
+                <constraint firstAttribute="trailing" secondItem="XaJ-HH-qe8" secondAttribute="trailing" id="NgM-qV-Ewa"/>
+                <constraint firstItem="XaJ-HH-qe8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="27" id="QlX-6s-NHa"/>
+                <constraint firstAttribute="trailing" secondItem="gsW-rD-fJd" secondAttribute="trailing" constant="-2" id="ZSU-Vs-Nld"/>
+                <constraint firstItem="XaJ-HH-qe8" firstAttribute="height" secondItem="gsW-rD-fJd" secondAttribute="height" multiplier="1.7" id="a4v-OR-h3s"/>
+                <constraint firstItem="gsW-rD-fJd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-3" id="egv-t5-mDV"/>
+                <constraint firstAttribute="bottom" secondItem="gsW-rD-fJd" secondAttribute="bottom" id="fhK-bN-dTN"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="266.5" y="310.5"/>
+        </view>
+    </objects>
+</document>
