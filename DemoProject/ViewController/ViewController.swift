@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        eatFitController.chartDataSource = self
+        eatFitController.dataSource = self
         eatFitController.view.frame = self.view.frame
         self.addChildViewController(eatFitController)
         self.view.tlk_addSubview(eatFitController.view, options: TLKAppearanceOptions.Overlay)
