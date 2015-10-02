@@ -3,7 +3,7 @@ EatFit
 
 [![Yalantis](https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoupDemo/Resouces/badge_dark.png)](http://Yalantis.com/?utm_source=github)
 
-Check this [article on our blog](https://github.com/Yalantis/EatFit). 
+Check this [article on our blog](https://yalantis.com/blog/eat-drink-track-how-we-created-eat-fit-animation-inspired-by-google-fit/). 
 
 ![Preview](https://yalantis.com/media/content/ckeditor/2015/09/30/charts-animation.gif)
 
