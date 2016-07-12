@@ -1,5 +1,5 @@
 //
-//  UILabel + Animation.swift
+//  UILabel+Animation.swift
 //  Pager
 //
 //  Created by aleksey on 08.06.15.

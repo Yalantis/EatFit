@@ -1,5 +1,5 @@
 //
-//  CAAnimationGroup + Sequence.swift
+//  CAAnimationGroup+Sequence.swift
 //  Pager
 //
 //  Created by aleksey on 08.07.15.

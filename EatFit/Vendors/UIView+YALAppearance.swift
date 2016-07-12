@@ -1,3 +1,10 @@
+//
+//  UIView+Appearance.swift
+//  Pager
+//
+//  Created by Dmitriy Demchenko on 7/12/16.
+//  Copyright © 2016 Dmitriy Demchenko. All rights reserved.
+//
 
 import UIKit
 
@@ -12,7 +19,7 @@ public struct AppearanceOptions: OptionSetType {
 
 extension UIView {
     
-    private func addSubviewUsingOptions(options: AppearanceOptions, modifier: SubviewTreeModifier) {
+    private func yal_addSubviewUsingOptions(options: AppearanceOptions, modifier: SubviewTreeModifier) {
         let subview = modifier()
         if options.union(.Overlay) == .Overlay {
             if options.union(.UseAutoresize) != .UseAutoresize {
@@ -52,21 +59,21 @@ extension UIView {
     
     // MARK: - Interface methods
     
-    public func addSubview(subview: UIView, options: AppearanceOptions) {
+    public func yal_addSubview(subview: UIView, options: AppearanceOptions) {
         if subview.superview == self {
             return
         }
-        addSubviewUsingOptions(options) { [weak self] in
+        yal_addSubviewUsingOptions(options) { [weak self] in
             self?.addSubview(subview)
             return subview
         }
     }
     
-    public func insertSubview(subview: UIView, index: Int, options: AppearanceOptions) {
+    public func yal_insertSubview(subview: UIView, index: Int, options: AppearanceOptions) {
         if subview.superview == self {
             return
         }
-        addSubviewUsingOptions(options) { [weak self] in
+        yal_addSubviewUsingOptions(options) { [weak self] in
             self?.insertSubview(subview, atIndex: index)
             return subview
         }

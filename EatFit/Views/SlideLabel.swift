@@ -38,8 +38,8 @@ class SlideLabelView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         label.frame = bounds
-        label.ac_trimLeft(40)
-        label.ac_trimRight(40)
+        label.yal_trimLeft(40)
+        label.yal_trimRight(40)
     }
     
     func animate (delay delay: NSTimeInterval) {
