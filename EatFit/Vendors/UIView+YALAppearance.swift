@@ -1,6 +1,6 @@
 //
 //  UIView+Appearance.swift
-//  Pager
+//  EatFit
 //
 //  Created by Dmitriy Demchenko on 7/12/16.
 //  Copyright © 2016 Dmitriy Demchenko. All rights reserved.

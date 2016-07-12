@@ -1,4 +1,7 @@
 //
+//  CAAnimationGroup+Sequence.swift
+//  EatFit
+//
 // Created by aleksey on 14.09.15.
 // Copyright (c) 2015 aleksey chernish. All rights reserved.
 //
