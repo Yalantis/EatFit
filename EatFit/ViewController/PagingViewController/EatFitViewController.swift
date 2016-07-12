@@ -41,7 +41,7 @@ class EatFitViewController : UIViewController {
         super.viewDidLoad()
         
         pageViewController.view.backgroundColor = UIColor.clearColor()
-        pageViewContainer.tlk_addSubview(pageViewController.view, options: TLKAppearanceOptions.Overlay)
+        pageViewContainer.addSubview(pageViewController.view, options: .Overlay)
         pageControl.pagesCount = dataSource.numberOfPagesForPagingViewController(self)
         pageControl.selectButton(0)
         reloadData()

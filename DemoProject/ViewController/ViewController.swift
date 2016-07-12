@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         eatFitController.dataSource = self
         eatFitController.view.frame = self.view.frame
         self.addChildViewController(eatFitController)
-        self.view.tlk_addSubview(eatFitController.view, options: TLKAppearanceOptions.Overlay)
+        self.view.addSubview(eatFitController.view, options: .Overlay)
     }
 }
 
