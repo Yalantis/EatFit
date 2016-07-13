@@ -17,14 +17,11 @@ class YALPageController: NSObject {
     
     var viewControllers = [UIViewController]()
     var didFinishTransition: YALPageControllerTransitionHook?
-    var pagingEnabled = false
+    var pagingEnabled = true
     
     weak var pageViewController: UIPageViewController!
     private weak var scrollView: UIScrollView!
     
-    override init() {
-        pagingEnabled = true
-    }
     
     func showPage(index: UInt, animated: Bool) {
         showViewController(viewControllers[Int(index)], animated: animated)
