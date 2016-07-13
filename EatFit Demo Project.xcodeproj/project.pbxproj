@@ -30,8 +30,8 @@
 		9280F84E1D34FFE600C94508 /* UIView+YALAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280F84D1D34FFE600C94508 /* UIView+YALAppearance.swift */; };
 		9280F8521D3511AC00C94508 /* UIView+YALFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280F8511D3511AC00C94508 /* UIView+YALFrames.swift */; };
 		9280F85E1D3518A800C94508 /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280F85D1D3518A800C94508 /* UIColor+Extention.swift */; };
-		9280F8601D3518DB00C94508 /* YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280F85F1D3518DB00C94508 /* YALPageController.swift */; };
-		9280F8621D352FFE00C94508 /* UIPageViewController+YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280F8611D352FFE00C94508 /* UIPageViewController+YALPageController.swift */; };
+		92CD79B41D364F78008B994F /* UIPageViewController+YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79B21D364F78008B994F /* UIPageViewController+YALPageController.swift */; };
+		92CD79B51D364F78008B994F /* YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79B31D364F78008B994F /* YALPageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,8 +60,8 @@
 		9280F84D1D34FFE600C94508 /* UIView+YALAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+YALAppearance.swift"; path = "../Vendors/UIView+YALAppearance.swift"; sourceTree = "<group>"; };
 		9280F8511D3511AC00C94508 /* UIView+YALFrames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+YALFrames.swift"; sourceTree = "<group>"; };
 		9280F85D1D3518A800C94508 /* UIColor+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
-		9280F85F1D3518DB00C94508 /* YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YALPageController.swift; sourceTree = "<group>"; };
-		9280F8611D352FFE00C94508 /* UIPageViewController+YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+YALPageController.swift"; sourceTree = "<group>"; };
+		92CD79B21D364F78008B994F /* UIPageViewController+YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+YALPageController.swift"; sourceTree = "<group>"; };
+		92CD79B31D364F78008B994F /* YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YALPageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,19 +135,9 @@
 		5B5E00211BBD570D0030AF3D /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				5B5E00221BBD570D0030AF3D /* YALPageController */,
+				92CD79B11D364F78008B994F /* YALPageController */,
 			);
 			path = Vendors;
-			sourceTree = "<group>";
-		};
-		5B5E00221BBD570D0030AF3D /* YALPageController */ = {
-			isa = PBXGroup;
-			children = (
-				9280F85F1D3518DB00C94508 /* YALPageController.swift */,
-				9280F8611D352FFE00C94508 /* UIPageViewController+YALPageController.swift */,
-			);
-			name = YALPageController;
-			path = ACPageController;
 			sourceTree = "<group>";
 		};
 		5B5E002A1BBD570D0030AF3D /* ViewController */ = {
@@ -269,6 +259,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		92CD79B11D364F78008B994F /* YALPageController */ = {
+			isa = PBXGroup;
+			children = (
+				92CD79B21D364F78008B994F /* UIPageViewController+YALPageController.swift */,
+				92CD79B31D364F78008B994F /* YALPageController.swift */,
+			);
+			path = YALPageController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,11 +349,11 @@
 				5B5E00431BBD570E0030AF3D /* EatFitPageControl.swift in Sources */,
 				5B6684021B94606200416AC3 /* ViewController.swift in Sources */,
 				5B5E003E1BBD570E0030AF3D /* EatFitViewController.swift in Sources */,
+				92CD79B41D364F78008B994F /* UIPageViewController+YALPageController.swift in Sources */,
 				5B5E00441BBD570E0030AF3D /* RoundChartView.swift in Sources */,
 				5B5E00421BBD570E0030AF3D /* DropView.swift in Sources */,
+				92CD79B51D364F78008B994F /* YALPageController.swift in Sources */,
 				5B5E003A1BBD570D0030AF3D /* Tween.swift in Sources */,
-				9280F8601D3518DB00C94508 /* YALPageController.swift in Sources */,
-				9280F8621D352FFE00C94508 /* UIPageViewController+YALPageController.swift in Sources */,
 				5B6683721B94529400416AC3 /* AppDelegate.swift in Sources */,
 				5B5E00451BBD570E0030AF3D /* SlideLabel.swift in Sources */,
 				5B5E00361BBD570D0030AF3D /* CAAnimationGroup+Sequence.swift in Sources */,

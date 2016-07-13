@@ -15,12 +15,12 @@ class YALPageController: NSObject {
     // declare a static var to produce a unique address as the assoc object handle
     static var YALPageControllerAssociatedObjectHandle: UInt8 = 123
     
-    var pageViewController = UIPageViewController()
     var viewControllers = [UIViewController]()
     var didFinishTransition: YALPageControllerTransitionHook?
     var pagingEnabled = false
     
-    private var scrollView = UIScrollView()
+    weak var pageViewController: UIPageViewController!
+    private weak var scrollView: UIScrollView!
     
     override init() {
         pagingEnabled = true
@@ -29,7 +29,7 @@ class YALPageController: NSObject {
     func showPage(index: UInt, animated: Bool) {
         showViewController(viewControllers[Int(index)], animated: animated)
         
-        if let firstControllers = viewControllers.first {
+        if let pageViewController = pageViewController, firstControllers = viewControllers.first {
             didFinishTransition?(
                 pageViewController: pageViewController,
                 viewController: firstControllers,
@@ -39,6 +39,9 @@ class YALPageController: NSObject {
     }
     
     func showViewController(viewController: UIViewController, animated: Bool) {
+        guard let pageViewController = pageViewController else {
+            return
+        }
         guard let lastViewController = pageViewController.viewControllers?.last else {
             return
         }
@@ -56,13 +59,18 @@ class YALPageController: NSObject {
             direction: direction,
             animated: animated,
             completion: { _ in
-                self.scrollView.scrollEnabled = self.pagingEnabled
+                if let _ = self.scrollView {
+                    self.scrollView.scrollEnabled = self.pagingEnabled
+                }
             }
         )
     }
     
     func setupViewControllers(viewControllers: [UIViewController]) {
         self.viewControllers = viewControllers
+        guard let pageViewController = pageViewController else {
+            return
+        }
         guard let firstViewController = viewControllers.first else {
             return
         }
@@ -99,7 +107,9 @@ class YALPageController: NSObject {
     
     private func setupPagingEnabled(pagingEnabled: Bool) {
         self.pagingEnabled = pagingEnabled
-        scrollView.scrollEnabled = pagingEnabled
+        if let _ = scrollView {
+            scrollView.scrollEnabled = pagingEnabled
+        }
     }
     
 }
@@ -107,24 +117,28 @@ class YALPageController: NSObject {
 extension YALPageController: UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        let idx = viewControllers.indexOf(viewController)
-        
-        if idx >= viewControllers.count - 1 {
+        guard let index = viewControllers.indexOf(viewController) else {
             return nil
         }
         
-        return viewControllers[idx! + 1]
+        if index >= viewControllers.count - 1 {
+            return nil
+        }
+        
+        return viewControllers[index + 1]
     }
     
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        let idx = viewControllers.indexOf(viewController)
-        
-        if idx <= 0 {
+        guard let index = viewControllers.indexOf(viewController) else {
             return nil
         }
         
-        return viewControllers[idx! - 1]
+        if index <= 0 {
+            return nil
+        }
+        
+        return viewControllers[index - 1]
     }
     
 }
@@ -134,7 +148,9 @@ extension YALPageController: UIPageViewControllerDelegate {
     
     func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
-        scrollView.pagingEnabled = pagingEnabled
+        if let _ = scrollView {
+            scrollView.pagingEnabled = pagingEnabled
+        }
         
         if let lastViewController = pageViewController.viewControllers?.last where lastViewController != previousViewControllers.last {
             
