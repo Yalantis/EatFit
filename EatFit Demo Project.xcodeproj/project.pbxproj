@@ -7,46 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B5E00361BBD570D0030AF3D /* CAAnimationGroup + Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00171BBD570D0030AF3D /* CAAnimationGroup + Sequence.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00371BBD570D0030AF3D /* UIView+ACFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00191BBD570D0030AF3D /* UIView+ACFrames.m */; settings = {ASSET_TAGS = (); }; };
-		5B5E00381BBD570D0030AF3D /* DIN Alternate Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001C1BBD570D0030AF3D /* DIN Alternate Bold.ttf */; settings = {ASSET_TAGS = (); }; };
-		5B5E00391BBD570D0030AF3D /* DIN Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001D1BBD570D0030AF3D /* DIN Condensed Bold.ttf */; settings = {ASSET_TAGS = (); }; };
-		5B5E003A1BBD570D0030AF3D /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00201BBD570D0030AF3D /* Tween.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E003B1BBD570D0030AF3D /* ACPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00241BBD570D0030AF3D /* ACPageController.m */; settings = {ASSET_TAGS = (); }; };
-		5B5E003C1BBD570D0030AF3D /* UIPageViewController+ACPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00261BBD570D0030AF3D /* UIPageViewController+ACPageController.m */; settings = {ASSET_TAGS = (); }; };
-		5B5E003D1BBD570E0030AF3D /* UIView+TLKAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00291BBD570D0030AF3D /* UIView+TLKAppearance.m */; settings = {ASSET_TAGS = (); }; };
-		5B5E003E1BBD570E0030AF3D /* EatFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002C1BBD570D0030AF3D /* EatFitViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E003F1BBD570E0030AF3D /* EatFitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E002D1BBD570D0030AF3D /* EatFitViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5B5E00401BBD570E0030AF3D /* EatFitSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002F1BBD570D0030AF3D /* EatFitSlideViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00411BBD570E0030AF3D /* EatFitSlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E00301BBD570D0030AF3D /* EatFitSlideViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5B5E00421BBD570E0030AF3D /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00321BBD570D0030AF3D /* DropView.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00431BBD570E0030AF3D /* EatFitPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00331BBD570D0030AF3D /* EatFitPageControl.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00441BBD570E0030AF3D /* RoundChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00341BBD570D0030AF3D /* RoundChartView.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00451BBD570E0030AF3D /* SlideLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00351BBD570D0030AF3D /* SlideLabel.swift */; settings = {ASSET_TAGS = (); }; };
+		5B5E00381BBD570D0030AF3D /* DIN Alternate Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001C1BBD570D0030AF3D /* DIN Alternate Bold.ttf */; };
+		5B5E00391BBD570D0030AF3D /* DIN Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001D1BBD570D0030AF3D /* DIN Condensed Bold.ttf */; };
+		5B5E003A1BBD570D0030AF3D /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00201BBD570D0030AF3D /* Tween.swift */; };
+		5B5E003E1BBD570E0030AF3D /* EatFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002C1BBD570D0030AF3D /* EatFitViewController.swift */; };
+		5B5E003F1BBD570E0030AF3D /* EatFitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E002D1BBD570D0030AF3D /* EatFitViewController.xib */; };
+		5B5E00401BBD570E0030AF3D /* EatFitSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002F1BBD570D0030AF3D /* EatFitSlideViewController.swift */; };
+		5B5E00411BBD570E0030AF3D /* EatFitSlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E00301BBD570D0030AF3D /* EatFitSlideViewController.xib */; };
+		5B5E00421BBD570E0030AF3D /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00321BBD570D0030AF3D /* DropView.swift */; };
+		5B5E00431BBD570E0030AF3D /* EatFitPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00331BBD570D0030AF3D /* EatFitPageControl.swift */; };
+		5B5E00441BBD570E0030AF3D /* RoundChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00341BBD570D0030AF3D /* RoundChartView.swift */; };
+		5B5E00451BBD570E0030AF3D /* SlideLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00351BBD570D0030AF3D /* SlideLabel.swift */; };
 		5B6683721B94529400416AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6683711B94529400416AC3 /* AppDelegate.swift */; };
 		5B6683771B94529400416AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6683751B94529400416AC3 /* Main.storyboard */; };
 		5B6683791B94529400416AC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6683781B94529400416AC3 /* Images.xcassets */; };
 		5B66837C1B94529400416AC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B66837A1B94529400416AC3 /* LaunchScreen.xib */; };
-		5B6683FB1B94603600416AC3 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6683F91B94603600416AC3 /* UIColor+HexColors.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		5B6683FC1B94603600416AC3 /* UILabel + Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6683FA1B94603600416AC3 /* UILabel + Animation.swift */; };
 		5B6683FF1B94604F00416AC3 /* СhartObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6683FE1B94604F00416AC3 /* СhartObject.swift */; };
 		5B6684021B94606200416AC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6684011B94606200416AC3 /* ViewController.swift */; };
 		5B6684381B94687700416AC3 /* Objects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B6684371B94687700416AC3 /* Objects.plist */; };
+		9280F85E1D3518A800C94508 /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280F85D1D3518A800C94508 /* UIColor+Extention.swift */; };
+		92CD79B41D364F78008B994F /* UIPageViewController+YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79B21D364F78008B994F /* UIPageViewController+YALPageController.swift */; };
+		92CD79B51D364F78008B994F /* YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79B31D364F78008B994F /* YALPageController.swift */; };
+		92CD79BF1D365B29008B994F /* CAAnimationGroup+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79BB1D365B29008B994F /* CAAnimationGroup+Sequence.swift */; };
+		92CD79C01D365B29008B994F /* UILabel+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79BC1D365B29008B994F /* UILabel+Animation.swift */; };
+		92CD79C11D365B29008B994F /* UIView+YALAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79BD1D365B29008B994F /* UIView+YALAppearance.swift */; };
+		92CD79C21D365B29008B994F /* UIView+YALFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79BE1D365B29008B994F /* UIView+YALFrames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B5E00171BBD570D0030AF3D /* CAAnimationGroup + Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAAnimationGroup + Sequence.swift"; sourceTree = "<group>"; };
-		5B5E00181BBD570D0030AF3D /* UIView+ACFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ACFrames.h"; sourceTree = "<group>"; };
-		5B5E00191BBD570D0030AF3D /* UIView+ACFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ACFrames.m"; sourceTree = "<group>"; };
 		5B5E001C1BBD570D0030AF3D /* DIN Alternate Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Alternate Bold.ttf"; sourceTree = "<group>"; };
 		5B5E001D1BBD570D0030AF3D /* DIN Condensed Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Condensed Bold.ttf"; sourceTree = "<group>"; };
 		5B5E00201BBD570D0030AF3D /* Tween.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tween.swift; sourceTree = "<group>"; };
-		5B5E00231BBD570D0030AF3D /* ACPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPageController.h; sourceTree = "<group>"; };
-		5B5E00241BBD570D0030AF3D /* ACPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPageController.m; sourceTree = "<group>"; };
-		5B5E00251BBD570D0030AF3D /* UIPageViewController+ACPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+ACPageController.h"; sourceTree = "<group>"; };
-		5B5E00261BBD570D0030AF3D /* UIPageViewController+ACPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+ACPageController.m"; sourceTree = "<group>"; };
-		5B5E00281BBD570D0030AF3D /* UIView+TLKAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TLKAppearance.h"; sourceTree = "<group>"; };
-		5B5E00291BBD570D0030AF3D /* UIView+TLKAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TLKAppearance.m"; sourceTree = "<group>"; };
 		5B5E002C1BBD570D0030AF3D /* EatFitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatFitViewController.swift; sourceTree = "<group>"; };
 		5B5E002D1BBD570D0030AF3D /* EatFitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatFitViewController.xib; sourceTree = "<group>"; };
 		5B5E002F1BBD570D0030AF3D /* EatFitSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatFitSlideViewController.swift; sourceTree = "<group>"; };
@@ -61,13 +52,16 @@
 		5B6683761B94529400416AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B6683781B94529400416AC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5B66837B1B94529400416AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5B6683F71B94603500416AC3 /* DemoProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoProject-Bridging-Header.h"; sourceTree = "<group>"; };
-		5B6683F81B94603600416AC3 /* UIColor+HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexColors.h"; path = "Categories/UIColor+HexColors.h"; sourceTree = "<group>"; };
-		5B6683F91B94603600416AC3 /* UIColor+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexColors.m"; path = "Categories/UIColor+HexColors.m"; sourceTree = "<group>"; };
-		5B6683FA1B94603600416AC3 /* UILabel + Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel + Animation.swift"; path = "Categories/UILabel + Animation.swift"; sourceTree = "<group>"; };
 		5B6683FE1B94604F00416AC3 /* СhartObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "СhartObject.swift"; path = "Model/СhartObject.swift"; sourceTree = "<group>"; };
 		5B6684011B94606200416AC3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewController/ViewController.swift; sourceTree = "<group>"; };
 		5B6684371B94687700416AC3 /* Objects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Objects.plist; sourceTree = "<group>"; };
+		9280F85D1D3518A800C94508 /* UIColor+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
+		92CD79B21D364F78008B994F /* UIPageViewController+YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+YALPageController.swift"; sourceTree = "<group>"; };
+		92CD79B31D364F78008B994F /* YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YALPageController.swift; sourceTree = "<group>"; };
+		92CD79BB1D365B29008B994F /* CAAnimationGroup+Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAAnimationGroup+Sequence.swift"; sourceTree = "<group>"; };
+		92CD79BC1D365B29008B994F /* UILabel+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Animation.swift"; sourceTree = "<group>"; };
+		92CD79BD1D365B29008B994F /* UIView+YALAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+YALAppearance.swift"; sourceTree = "<group>"; };
+		92CD79BE1D365B29008B994F /* UIView+YALFrames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+YALFrames.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +78,7 @@
 		5B5E00151BBD570D0030AF3D /* EatFit */ = {
 			isa = PBXGroup;
 			children = (
-				5B5E00161BBD570D0030AF3D /* Categories */,
+				92CD79BA1D365B29008B994F /* Extensions */,
 				5B5E001A1BBD570D0030AF3D /* Resources */,
 				5B5E001E1BBD570D0030AF3D /* Various */,
 				5B5E00211BBD570D0030AF3D /* Vendors */,
@@ -93,16 +87,6 @@
 			);
 			path = EatFit;
 			sourceTree = SOURCE_ROOT;
-		};
-		5B5E00161BBD570D0030AF3D /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E00171BBD570D0030AF3D /* CAAnimationGroup + Sequence.swift */,
-				5B5E00181BBD570D0030AF3D /* UIView+ACFrames.h */,
-				5B5E00191BBD570D0030AF3D /* UIView+ACFrames.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
 		};
 		5B5E001A1BBD570D0030AF3D /* Resources */ = {
 			isa = PBXGroup;
@@ -140,30 +124,9 @@
 		5B5E00211BBD570D0030AF3D /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				5B5E00221BBD570D0030AF3D /* ACPageController */,
-				5B5E00271BBD570D0030AF3D /* UIView+TLKAppearance */,
+				92CD79B11D364F78008B994F /* YALPageController */,
 			);
 			path = Vendors;
-			sourceTree = "<group>";
-		};
-		5B5E00221BBD570D0030AF3D /* ACPageController */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E00231BBD570D0030AF3D /* ACPageController.h */,
-				5B5E00241BBD570D0030AF3D /* ACPageController.m */,
-				5B5E00251BBD570D0030AF3D /* UIPageViewController+ACPageController.h */,
-				5B5E00261BBD570D0030AF3D /* UIPageViewController+ACPageController.m */,
-			);
-			path = ACPageController;
-			sourceTree = "<group>";
-		};
-		5B5E00271BBD570D0030AF3D /* UIView+TLKAppearance */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E00281BBD570D0030AF3D /* UIView+TLKAppearance.h */,
-				5B5E00291BBD570D0030AF3D /* UIView+TLKAppearance.m */,
-			);
-			path = "UIView+TLKAppearance";
 			sourceTree = "<group>";
 		};
 		5B5E002A1BBD570D0030AF3D /* ViewController */ = {
@@ -248,10 +211,7 @@
 		5B6683F61B94602600416AC3 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				5B6683F81B94603600416AC3 /* UIColor+HexColors.h */,
-				5B6683F91B94603600416AC3 /* UIColor+HexColors.m */,
-				5B6683FA1B94603600416AC3 /* UILabel + Animation.swift */,
-				5B6683F71B94603500416AC3 /* DemoProject-Bridging-Header.h */,
+				9280F85D1D3518A800C94508 /* UIColor+Extention.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -286,6 +246,26 @@
 				5B6684371B94687700416AC3 /* Objects.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		92CD79B11D364F78008B994F /* YALPageController */ = {
+			isa = PBXGroup;
+			children = (
+				92CD79B21D364F78008B994F /* UIPageViewController+YALPageController.swift */,
+				92CD79B31D364F78008B994F /* YALPageController.swift */,
+			);
+			path = YALPageController;
+			sourceTree = "<group>";
+		};
+		92CD79BA1D365B29008B994F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92CD79BB1D365B29008B994F /* CAAnimationGroup+Sequence.swift */,
+				92CD79BC1D365B29008B994F /* UILabel+Animation.swift */,
+				92CD79BD1D365B29008B994F /* UIView+YALAppearance.swift */,
+				92CD79BE1D365B29008B994F /* UIView+YALFrames.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,21 +346,21 @@
 			files = (
 				5B5E00401BBD570E0030AF3D /* EatFitSlideViewController.swift in Sources */,
 				5B5E00431BBD570E0030AF3D /* EatFitPageControl.swift in Sources */,
+				92CD79C21D365B29008B994F /* UIView+YALFrames.swift in Sources */,
 				5B6684021B94606200416AC3 /* ViewController.swift in Sources */,
+				92CD79BF1D365B29008B994F /* CAAnimationGroup+Sequence.swift in Sources */,
 				5B5E003E1BBD570E0030AF3D /* EatFitViewController.swift in Sources */,
+				92CD79B41D364F78008B994F /* UIPageViewController+YALPageController.swift in Sources */,
 				5B5E00441BBD570E0030AF3D /* RoundChartView.swift in Sources */,
 				5B5E00421BBD570E0030AF3D /* DropView.swift in Sources */,
+				92CD79B51D364F78008B994F /* YALPageController.swift in Sources */,
 				5B5E003A1BBD570D0030AF3D /* Tween.swift in Sources */,
-				5B5E003C1BBD570D0030AF3D /* UIPageViewController+ACPageController.m in Sources */,
 				5B6683721B94529400416AC3 /* AppDelegate.swift in Sources */,
-				5B5E00371BBD570D0030AF3D /* UIView+ACFrames.m in Sources */,
-				5B6683FB1B94603600416AC3 /* UIColor+HexColors.m in Sources */,
 				5B5E00451BBD570E0030AF3D /* SlideLabel.swift in Sources */,
-				5B5E00361BBD570D0030AF3D /* CAAnimationGroup + Sequence.swift in Sources */,
-				5B5E003B1BBD570D0030AF3D /* ACPageController.m in Sources */,
-				5B6683FC1B94603600416AC3 /* UILabel + Animation.swift in Sources */,
+				92CD79C01D365B29008B994F /* UILabel+Animation.swift in Sources */,
+				9280F85E1D3518A800C94508 /* UIColor+Extention.swift in Sources */,
 				5B6683FF1B94604F00416AC3 /* СhartObject.swift in Sources */,
-				5B5E003D1BBD570E0030AF3D /* UIView+TLKAppearance.m in Sources */,
+				92CD79C11D365B29008B994F /* UIView+YALAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "YAL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "EatFit Demo Project";
-				SWIFT_OBJC_BRIDGING_HEADER = "DemoProject/DemoProject-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -511,7 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "YAL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "EatFit Demo Project";
-				SWIFT_OBJC_BRIDGING_HEADER = "DemoProject/DemoProject-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

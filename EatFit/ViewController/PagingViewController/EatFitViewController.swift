@@ -1,6 +1,6 @@
 //
 //  EatFitViewcontroller.swift
-//  Pager
+//  EatFit
 //
 //  Created by aleksey on 08.05.15.
 //  Copyright (c) 2015 Aleksey Chernish. All rights reserved.
@@ -41,14 +41,14 @@ class EatFitViewController : UIViewController {
         super.viewDidLoad()
         
         pageViewController.view.backgroundColor = UIColor.clearColor()
-        pageViewContainer.tlk_addSubview(pageViewController.view, options: TLKAppearanceOptions.Overlay)
+        pageViewContainer.yal_addSubview(pageViewController.view, options: .Overlay)
         pageControl.pagesCount = dataSource.numberOfPagesForPagingViewController(self)
         pageControl.selectButton(0)
         reloadData()
     }
     
     func reloadData() {
-        pageViewController.ac_setDidFinishTransition({ (pageController, viewController, idx) -> Void in
+        pageViewController.yal_setDidFinishTransition({ (pageController, viewController, idx) -> Void in
             self.pageControl.selectButton(Int(idx))
             let slide = viewController as! EatFitSlideViewController
             slide.animate()
@@ -68,7 +68,7 @@ class EatFitViewController : UIViewController {
             pages.append(vc)
 
             pageControl.selectButton(0)
-            pageViewController.ac_setViewControllers(pages)
+            pageViewController.yal_setViewControllers(pages)
         }
     }
 }

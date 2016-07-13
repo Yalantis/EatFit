@@ -1,6 +1,6 @@
 //
 //  SlideLabel.swift
-//  Pager
+//  EatFit
 //
 //  Created by aleksey on 08.07.15.
 //  Copyright (c) 2015 Aleksey Chernish. All rights reserved.
@@ -38,8 +38,8 @@ class SlideLabelView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         label.frame = bounds
-        label.ac_trimLeft(40)
-        label.ac_trimRight(40)
+        label.yal_trimLeft(40)
+        label.yal_trimRight(40)
     }
     
     func animate (delay delay: NSTimeInterval) {

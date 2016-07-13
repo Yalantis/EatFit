@@ -1,6 +1,6 @@
 //
-//  CAAnimationGroup + Sequence.swift
-//  Pager
+//  CAAnimationGroup+Sequence.swift
+//  EatFit
 //
 //  Created by aleksey on 08.07.15.
 //  Copyright (c) 2015 Aleksey Chernish. All rights reserved.

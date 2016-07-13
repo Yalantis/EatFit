@@ -1,6 +1,6 @@
 //
 //  RoundChartView.swift
-//  Pager
+//  EatFit
 //
 //  Created by aleksey on 07.07.15.
 //  Copyright (c) 2015 Aleksey Chernish. All rights reserved.

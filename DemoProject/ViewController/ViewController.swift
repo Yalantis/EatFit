@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Pager
+//  EatFit Demo Project
 //
 //  Created by aleksey on 08.05.15.
 //  Copyright (c) 2015 Aleksey Chernish. All rights reserved.
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         eatFitController.dataSource = self
         eatFitController.view.frame = self.view.frame
         self.addChildViewController(eatFitController)
-        self.view.tlk_addSubview(eatFitController.view, options: TLKAppearanceOptions.Overlay)
+        self.view.yal_addSubview(eatFitController.view, options: .Overlay)
     }
 }
 

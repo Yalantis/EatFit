@@ -1,6 +1,6 @@
 //
 //  СhartObject.swift
-//  Pager
+//  EatFit Demo Project
 //
 //  Created by aleksey on 10.05.15.
 //  Copyright (c) 2015 Aleksey Chernish. All rights reserved.
@@ -15,4 +15,3 @@ struct ChartObject {
     var description: String
     var logoImage: UIImage
 }
-

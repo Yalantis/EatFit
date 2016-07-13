@@ -1,6 +1,6 @@
 //
-//  UILabel + Animation.swift
-//  Pager
+//  UILabel+Animation.swift
+//  EatFit
 //
 //  Created by aleksey on 08.06.15.
 //  Copyright (c) 2015 Aleksey Chernish. All rights reserved.
