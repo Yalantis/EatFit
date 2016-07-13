@@ -15,18 +15,18 @@ class YALPageController: NSObject {
     // declare a static var to produce a unique address as the assoc object handle
     static var YALPageControllerAssociatedObjectHandle: UInt8 = 123
     
-    /*weak*/ internal var pageViewController = UIPageViewController()
-    internal var viewControllers = [UIViewController]()
-    internal var didFinishTransition: YALPageControllerTransitionHook?
-    internal var pagingEnabled = false
+    var pageViewController = UIPageViewController()
+    var viewControllers = [UIViewController]()
+    var didFinishTransition: YALPageControllerTransitionHook?
+    var pagingEnabled = false
     
-    private /*weak*/ var scrollView = UIScrollView()
+    private var scrollView = UIScrollView()
     
     override init() {
         pagingEnabled = true
     }
     
-    internal func showPage(index: UInt, animated: Bool) {
+    func showPage(index: UInt, animated: Bool) {
         showViewController(viewControllers[Int(index)], animated: animated)
         
         if let firstControllers = viewControllers.first {
@@ -38,7 +38,7 @@ class YALPageController: NSObject {
         }
     }
     
-    internal func showViewController(viewController: UIViewController, animated: Bool) {
+    func showViewController(viewController: UIViewController, animated: Bool) {
         guard let lastViewController = pageViewController.viewControllers?.last else {
             return
         }
@@ -61,7 +61,7 @@ class YALPageController: NSObject {
         )
     }
     
-    internal func setupViewControllers(viewControllers: [UIViewController]) {
+    func setupViewControllers(viewControllers: [UIViewController]) {
         self.viewControllers = viewControllers
         guard let firstViewController = viewControllers.first else {
             return
@@ -85,7 +85,7 @@ class YALPageController: NSObject {
         )
     }
     
-    private func setupPageViewController(pageViewController: UIPageViewController) {
+    func setupPageViewController(pageViewController: UIPageViewController) {
         self.pageViewController = pageViewController
         
         self.pageViewController.view.subviews.forEach { view in
