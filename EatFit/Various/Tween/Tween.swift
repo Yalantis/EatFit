@@ -6,7 +6,7 @@
 // Copyright (c) 2015 aleksey chernish. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Tween {
     private weak var layer: TweenLayer!

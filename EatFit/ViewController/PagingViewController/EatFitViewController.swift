@@ -48,7 +48,7 @@ class EatFitViewController : UIViewController {
     }
     
     func reloadData() {
-        pageViewController.ac_setDidFinishTransition({ (pageController, viewController, idx) -> Void in
+        pageViewController.yal_setDidFinishTransition({ (pageController, viewController, idx) -> Void in
             self.pageControl.selectButton(Int(idx))
             let slide = viewController as! EatFitSlideViewController
             slide.animate()
@@ -68,7 +68,7 @@ class EatFitViewController : UIViewController {
             pages.append(vc)
 
             pageControl.selectButton(0)
-            pageViewController.ac_setViewControllers(pages)
+            pageViewController.yal_setViewControllers(pages)
         }
     }
 }
