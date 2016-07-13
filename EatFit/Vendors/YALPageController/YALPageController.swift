@@ -154,13 +154,13 @@ extension YALPageController: UIPageViewControllerDelegate {
         
         if let lastViewController = pageViewController.viewControllers?.last where lastViewController != previousViewControllers.last {
             
-            let lastIndex = viewControllers.indexOf(lastViewController)
-            
-            didFinishTransition?(
-                pageViewController: pageViewController,
-                viewController: lastViewController,
-                pageIndex: UInt(lastIndex!)
-            )
+            if let lastIndex = viewControllers.indexOf(lastViewController) {
+                didFinishTransition?(
+                    pageViewController: pageViewController,
+                    viewController: lastViewController,
+                    pageIndex: UInt(lastIndex)
+                )
+            }
         }
     }
     
