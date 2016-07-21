@@ -43,7 +43,7 @@ class DropView : UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        drop.frame = CGRect(x: (bounds.width - chartThickness) / 2.0, y: -(chartThickness / 2.0), width: chartThickness, height: chartThickness)
+        drop.frame = CGRect(x: (ceil(bounds.width) - chartThickness) / 2.0, y: -(chartThickness / 2.0), width: chartThickness, height: chartThickness)
         drop.path = UIBezierPath(ovalInRect: drop.bounds).CGPath
         
          logoImageView.frame = CGRect(x: (bounds.width - 30.0) / 2.0, y: -chartThickness, width: 30.0, height: 30.0)
