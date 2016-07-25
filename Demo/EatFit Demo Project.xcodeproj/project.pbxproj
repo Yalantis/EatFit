@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B5E00381BBD570D0030AF3D /* DIN Alternate Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001C1BBD570D0030AF3D /* DIN Alternate Bold.ttf */; };
-		5B5E00391BBD570D0030AF3D /* DIN Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001D1BBD570D0030AF3D /* DIN Condensed Bold.ttf */; };
-		5B5E003A1BBD570D0030AF3D /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00201BBD570D0030AF3D /* Tween.swift */; };
-		5B5E003E1BBD570E0030AF3D /* EatFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002C1BBD570D0030AF3D /* EatFitViewController.swift */; };
-		5B5E003F1BBD570E0030AF3D /* EatFitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E002D1BBD570D0030AF3D /* EatFitViewController.xib */; };
-		5B5E00401BBD570E0030AF3D /* EatFitSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002F1BBD570D0030AF3D /* EatFitSlideViewController.swift */; };
-		5B5E00411BBD570E0030AF3D /* EatFitSlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E00301BBD570D0030AF3D /* EatFitSlideViewController.xib */; };
-		5B5E00421BBD570E0030AF3D /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00321BBD570D0030AF3D /* DropView.swift */; };
-		5B5E00431BBD570E0030AF3D /* EatFitPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00331BBD570D0030AF3D /* EatFitPageControl.swift */; };
-		5B5E00441BBD570E0030AF3D /* RoundChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00341BBD570D0030AF3D /* RoundChartView.swift */; };
-		5B5E00451BBD570E0030AF3D /* SlideLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00351BBD570D0030AF3D /* SlideLabel.swift */; };
 		5B6683721B94529400416AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6683711B94529400416AC3 /* AppDelegate.swift */; };
 		5B6683771B94529400416AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6683751B94529400416AC3 /* Main.storyboard */; };
 		5B6683791B94529400416AC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6683781B94529400416AC3 /* Images.xcassets */; };
@@ -26,26 +15,26 @@
 		5B6684021B94606200416AC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6684011B94606200416AC3 /* ViewController.swift */; };
 		5B6684381B94687700416AC3 /* Objects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B6684371B94687700416AC3 /* Objects.plist */; };
 		9280F85E1D3518A800C94508 /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280F85D1D3518A800C94508 /* UIColor+Extention.swift */; };
-		92CD79B41D364F78008B994F /* UIPageViewController+YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79B21D364F78008B994F /* UIPageViewController+YALPageController.swift */; };
-		92CD79B51D364F78008B994F /* YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79B31D364F78008B994F /* YALPageController.swift */; };
-		92CD79BF1D365B29008B994F /* CAAnimationGroup+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79BB1D365B29008B994F /* CAAnimationGroup+Sequence.swift */; };
-		92CD79C01D365B29008B994F /* UILabel+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79BC1D365B29008B994F /* UILabel+Animation.swift */; };
-		92CD79C11D365B29008B994F /* UIView+YALAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79BD1D365B29008B994F /* UIView+YALAppearance.swift */; };
-		92CD79C21D365B29008B994F /* UIView+YALFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD79BE1D365B29008B994F /* UIView+YALFrames.swift */; };
+		C52988601D45E1F20058C829 /* CAAnimationGroup+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52988451D45E1F20058C829 /* CAAnimationGroup+Sequence.swift */; };
+		C52988611D45E1F20058C829 /* UILabel+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52988461D45E1F20058C829 /* UILabel+Animation.swift */; };
+		C52988621D45E1F20058C829 /* UIView+YALAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52988471D45E1F20058C829 /* UIView+YALAppearance.swift */; };
+		C52988631D45E1F20058C829 /* UIView+YALFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52988481D45E1F20058C829 /* UIView+YALFrames.swift */; };
+		C52988641D45E1F20058C829 /* DIN Alternate Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C529884B1D45E1F20058C829 /* DIN Alternate Bold.ttf */; };
+		C52988651D45E1F20058C829 /* DIN Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C529884C1D45E1F20058C829 /* DIN Condensed Bold.ttf */; };
+		C52988661D45E1F20058C829 /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = C529884F1D45E1F20058C829 /* Tween.swift */; };
+		C52988671D45E1F20058C829 /* UIPageViewController+YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52988521D45E1F20058C829 /* UIPageViewController+YALPageController.swift */; };
+		C52988681D45E1F20058C829 /* YALPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52988531D45E1F20058C829 /* YALPageController.swift */; };
+		C52988691D45E1F20058C829 /* EatFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52988561D45E1F20058C829 /* EatFitViewController.swift */; };
+		C529886A1D45E1F20058C829 /* EatFitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C52988571D45E1F20058C829 /* EatFitViewController.xib */; };
+		C529886B1D45E1F20058C829 /* EatFitSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52988591D45E1F20058C829 /* EatFitSlideViewController.swift */; };
+		C529886C1D45E1F20058C829 /* EatFitSlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C529885A1D45E1F20058C829 /* EatFitSlideViewController.xib */; };
+		C529886D1D45E1F20058C829 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C529885C1D45E1F20058C829 /* DropView.swift */; };
+		C529886E1D45E1F20058C829 /* EatFitPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C529885D1D45E1F20058C829 /* EatFitPageControl.swift */; };
+		C529886F1D45E1F20058C829 /* RoundChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C529885E1D45E1F20058C829 /* RoundChartView.swift */; };
+		C52988701D45E1F20058C829 /* SlideLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C529885F1D45E1F20058C829 /* SlideLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B5E001C1BBD570D0030AF3D /* DIN Alternate Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Alternate Bold.ttf"; sourceTree = "<group>"; };
-		5B5E001D1BBD570D0030AF3D /* DIN Condensed Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Condensed Bold.ttf"; sourceTree = "<group>"; };
-		5B5E00201BBD570D0030AF3D /* Tween.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tween.swift; sourceTree = "<group>"; };
-		5B5E002C1BBD570D0030AF3D /* EatFitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatFitViewController.swift; sourceTree = "<group>"; };
-		5B5E002D1BBD570D0030AF3D /* EatFitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatFitViewController.xib; sourceTree = "<group>"; };
-		5B5E002F1BBD570D0030AF3D /* EatFitSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatFitSlideViewController.swift; sourceTree = "<group>"; };
-		5B5E00301BBD570D0030AF3D /* EatFitSlideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatFitSlideViewController.xib; sourceTree = "<group>"; };
-		5B5E00321BBD570D0030AF3D /* DropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
-		5B5E00331BBD570D0030AF3D /* EatFitPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatFitPageControl.swift; sourceTree = "<group>"; };
-		5B5E00341BBD570D0030AF3D /* RoundChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundChartView.swift; sourceTree = "<group>"; };
-		5B5E00351BBD570D0030AF3D /* SlideLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideLabel.swift; sourceTree = "<group>"; };
 		5B66836C1B94529400416AC3 /* EatFit Demo Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EatFit Demo Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6683701B94529400416AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B6683711B94529400416AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,12 +45,23 @@
 		5B6684011B94606200416AC3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewController/ViewController.swift; sourceTree = "<group>"; };
 		5B6684371B94687700416AC3 /* Objects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Objects.plist; sourceTree = "<group>"; };
 		9280F85D1D3518A800C94508 /* UIColor+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
-		92CD79B21D364F78008B994F /* UIPageViewController+YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+YALPageController.swift"; sourceTree = "<group>"; };
-		92CD79B31D364F78008B994F /* YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YALPageController.swift; sourceTree = "<group>"; };
-		92CD79BB1D365B29008B994F /* CAAnimationGroup+Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAAnimationGroup+Sequence.swift"; sourceTree = "<group>"; };
-		92CD79BC1D365B29008B994F /* UILabel+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Animation.swift"; sourceTree = "<group>"; };
-		92CD79BD1D365B29008B994F /* UIView+YALAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+YALAppearance.swift"; sourceTree = "<group>"; };
-		92CD79BE1D365B29008B994F /* UIView+YALFrames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+YALFrames.swift"; sourceTree = "<group>"; };
+		C52988451D45E1F20058C829 /* CAAnimationGroup+Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAAnimationGroup+Sequence.swift"; sourceTree = "<group>"; };
+		C52988461D45E1F20058C829 /* UILabel+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Animation.swift"; sourceTree = "<group>"; };
+		C52988471D45E1F20058C829 /* UIView+YALAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+YALAppearance.swift"; sourceTree = "<group>"; };
+		C52988481D45E1F20058C829 /* UIView+YALFrames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+YALFrames.swift"; sourceTree = "<group>"; };
+		C529884B1D45E1F20058C829 /* DIN Alternate Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Alternate Bold.ttf"; sourceTree = "<group>"; };
+		C529884C1D45E1F20058C829 /* DIN Condensed Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Condensed Bold.ttf"; sourceTree = "<group>"; };
+		C529884F1D45E1F20058C829 /* Tween.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tween.swift; sourceTree = "<group>"; };
+		C52988521D45E1F20058C829 /* UIPageViewController+YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+YALPageController.swift"; sourceTree = "<group>"; };
+		C52988531D45E1F20058C829 /* YALPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YALPageController.swift; sourceTree = "<group>"; };
+		C52988561D45E1F20058C829 /* EatFitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatFitViewController.swift; sourceTree = "<group>"; };
+		C52988571D45E1F20058C829 /* EatFitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatFitViewController.xib; sourceTree = "<group>"; };
+		C52988591D45E1F20058C829 /* EatFitSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatFitSlideViewController.swift; sourceTree = "<group>"; };
+		C529885A1D45E1F20058C829 /* EatFitSlideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatFitSlideViewController.xib; sourceTree = "<group>"; };
+		C529885C1D45E1F20058C829 /* DropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
+		C529885D1D45E1F20058C829 /* EatFitPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatFitPageControl.swift; sourceTree = "<group>"; };
+		C529885E1D45E1F20058C829 /* RoundChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundChartView.swift; sourceTree = "<group>"; };
+		C529885F1D45E1F20058C829 /* SlideLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,98 +75,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B5E00151BBD570D0030AF3D /* EatFit */ = {
-			isa = PBXGroup;
-			children = (
-				92CD79BA1D365B29008B994F /* Extensions */,
-				5B5E001A1BBD570D0030AF3D /* Resources */,
-				5B5E001E1BBD570D0030AF3D /* Various */,
-				5B5E00211BBD570D0030AF3D /* Vendors */,
-				5B5E002A1BBD570D0030AF3D /* ViewController */,
-				5B5E00311BBD570D0030AF3D /* Views */,
-			);
-			path = EatFit;
-			sourceTree = SOURCE_ROOT;
-		};
-		5B5E001A1BBD570D0030AF3D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E001B1BBD570D0030AF3D /* Fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		5B5E001B1BBD570D0030AF3D /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E001C1BBD570D0030AF3D /* DIN Alternate Bold.ttf */,
-				5B5E001D1BBD570D0030AF3D /* DIN Condensed Bold.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		5B5E001E1BBD570D0030AF3D /* Various */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E001F1BBD570D0030AF3D /* Tween */,
-			);
-			path = Various;
-			sourceTree = "<group>";
-		};
-		5B5E001F1BBD570D0030AF3D /* Tween */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E00201BBD570D0030AF3D /* Tween.swift */,
-			);
-			path = Tween;
-			sourceTree = "<group>";
-		};
-		5B5E00211BBD570D0030AF3D /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-				92CD79B11D364F78008B994F /* YALPageController */,
-			);
-			path = Vendors;
-			sourceTree = "<group>";
-		};
-		5B5E002A1BBD570D0030AF3D /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E002B1BBD570D0030AF3D /* PagingViewController */,
-				5B5E002E1BBD570D0030AF3D /* Slide */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		5B5E002B1BBD570D0030AF3D /* PagingViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E002C1BBD570D0030AF3D /* EatFitViewController.swift */,
-				5B5E002D1BBD570D0030AF3D /* EatFitViewController.xib */,
-			);
-			path = PagingViewController;
-			sourceTree = "<group>";
-		};
-		5B5E002E1BBD570D0030AF3D /* Slide */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E002F1BBD570D0030AF3D /* EatFitSlideViewController.swift */,
-				5B5E00301BBD570D0030AF3D /* EatFitSlideViewController.xib */,
-			);
-			path = Slide;
-			sourceTree = "<group>";
-		};
-		5B5E00311BBD570D0030AF3D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5B5E00321BBD570D0030AF3D /* DropView.swift */,
-				5B5E00331BBD570D0030AF3D /* EatFitPageControl.swift */,
-				5B5E00341BBD570D0030AF3D /* RoundChartView.swift */,
-				5B5E00351BBD570D0030AF3D /* SlideLabel.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		5B6683631B94529400416AC3 = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +143,7 @@
 		5B6684091B9462F000416AC3 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				5B5E00151BBD570D0030AF3D /* EatFit */,
+				C52988431D45E1F20058C829 /* EatFit */,
 			);
 			name = Vendors;
 			sourceTree = "<group>";
@@ -248,24 +156,117 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		92CD79B11D364F78008B994F /* YALPageController */ = {
+		C52988431D45E1F20058C829 /* EatFit */ = {
 			isa = PBXGroup;
 			children = (
-				92CD79B21D364F78008B994F /* UIPageViewController+YALPageController.swift */,
-				92CD79B31D364F78008B994F /* YALPageController.swift */,
+				C52988441D45E1F20058C829 /* Extensions */,
+				C52988491D45E1F20058C829 /* Resources */,
+				C529884D1D45E1F20058C829 /* Various */,
+				C52988501D45E1F20058C829 /* Vendors */,
+				C52988541D45E1F20058C829 /* ViewController */,
+				C529885B1D45E1F20058C829 /* Views */,
+			);
+			name = EatFit;
+			path = ../../EatFit;
+			sourceTree = "<group>";
+		};
+		C52988441D45E1F20058C829 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C52988451D45E1F20058C829 /* CAAnimationGroup+Sequence.swift */,
+				C52988461D45E1F20058C829 /* UILabel+Animation.swift */,
+				C52988471D45E1F20058C829 /* UIView+YALAppearance.swift */,
+				C52988481D45E1F20058C829 /* UIView+YALFrames.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C52988491D45E1F20058C829 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C529884A1D45E1F20058C829 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C529884A1D45E1F20058C829 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C529884B1D45E1F20058C829 /* DIN Alternate Bold.ttf */,
+				C529884C1D45E1F20058C829 /* DIN Condensed Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C529884D1D45E1F20058C829 /* Various */ = {
+			isa = PBXGroup;
+			children = (
+				C529884E1D45E1F20058C829 /* Tween */,
+			);
+			path = Various;
+			sourceTree = "<group>";
+		};
+		C529884E1D45E1F20058C829 /* Tween */ = {
+			isa = PBXGroup;
+			children = (
+				C529884F1D45E1F20058C829 /* Tween.swift */,
+			);
+			path = Tween;
+			sourceTree = "<group>";
+		};
+		C52988501D45E1F20058C829 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				C52988511D45E1F20058C829 /* YALPageController */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		C52988511D45E1F20058C829 /* YALPageController */ = {
+			isa = PBXGroup;
+			children = (
+				C52988521D45E1F20058C829 /* UIPageViewController+YALPageController.swift */,
+				C52988531D45E1F20058C829 /* YALPageController.swift */,
 			);
 			path = YALPageController;
 			sourceTree = "<group>";
 		};
-		92CD79BA1D365B29008B994F /* Extensions */ = {
+		C52988541D45E1F20058C829 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				92CD79BB1D365B29008B994F /* CAAnimationGroup+Sequence.swift */,
-				92CD79BC1D365B29008B994F /* UILabel+Animation.swift */,
-				92CD79BD1D365B29008B994F /* UIView+YALAppearance.swift */,
-				92CD79BE1D365B29008B994F /* UIView+YALFrames.swift */,
+				C52988551D45E1F20058C829 /* PagingViewController */,
+				C52988581D45E1F20058C829 /* Slide */,
 			);
-			path = Extensions;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C52988551D45E1F20058C829 /* PagingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C52988561D45E1F20058C829 /* EatFitViewController.swift */,
+				C52988571D45E1F20058C829 /* EatFitViewController.xib */,
+			);
+			path = PagingViewController;
+			sourceTree = "<group>";
+		};
+		C52988581D45E1F20058C829 /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				C52988591D45E1F20058C829 /* EatFitSlideViewController.swift */,
+				C529885A1D45E1F20058C829 /* EatFitSlideViewController.xib */,
+			);
+			path = Slide;
+			sourceTree = "<group>";
+		};
+		C529885B1D45E1F20058C829 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C529885C1D45E1F20058C829 /* DropView.swift */,
+				C529885D1D45E1F20058C829 /* EatFitPageControl.swift */,
+				C529885E1D45E1F20058C829 /* RoundChartView.swift */,
+				C529885F1D45E1F20058C829 /* SlideLabel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,11 +330,11 @@
 				5B6683771B94529400416AC3 /* Main.storyboard in Resources */,
 				5B6684381B94687700416AC3 /* Objects.plist in Resources */,
 				5B66837C1B94529400416AC3 /* LaunchScreen.xib in Resources */,
-				5B5E00411BBD570E0030AF3D /* EatFitSlideViewController.xib in Resources */,
-				5B5E003F1BBD570E0030AF3D /* EatFitViewController.xib in Resources */,
+				C529886C1D45E1F20058C829 /* EatFitSlideViewController.xib in Resources */,
+				C529886A1D45E1F20058C829 /* EatFitViewController.xib in Resources */,
 				5B6683791B94529400416AC3 /* Images.xcassets in Resources */,
-				5B5E00381BBD570D0030AF3D /* DIN Alternate Bold.ttf in Resources */,
-				5B5E00391BBD570D0030AF3D /* DIN Condensed Bold.ttf in Resources */,
+				C52988641D45E1F20058C829 /* DIN Alternate Bold.ttf in Resources */,
+				C52988651D45E1F20058C829 /* DIN Condensed Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,23 +345,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B5E00401BBD570E0030AF3D /* EatFitSlideViewController.swift in Sources */,
-				5B5E00431BBD570E0030AF3D /* EatFitPageControl.swift in Sources */,
-				92CD79C21D365B29008B994F /* UIView+YALFrames.swift in Sources */,
+				C529886B1D45E1F20058C829 /* EatFitSlideViewController.swift in Sources */,
+				C529886E1D45E1F20058C829 /* EatFitPageControl.swift in Sources */,
 				5B6684021B94606200416AC3 /* ViewController.swift in Sources */,
-				92CD79BF1D365B29008B994F /* CAAnimationGroup+Sequence.swift in Sources */,
-				5B5E003E1BBD570E0030AF3D /* EatFitViewController.swift in Sources */,
-				92CD79B41D364F78008B994F /* UIPageViewController+YALPageController.swift in Sources */,
-				5B5E00441BBD570E0030AF3D /* RoundChartView.swift in Sources */,
-				5B5E00421BBD570E0030AF3D /* DropView.swift in Sources */,
-				92CD79B51D364F78008B994F /* YALPageController.swift in Sources */,
-				5B5E003A1BBD570D0030AF3D /* Tween.swift in Sources */,
+				C52988691D45E1F20058C829 /* EatFitViewController.swift in Sources */,
+				C529886F1D45E1F20058C829 /* RoundChartView.swift in Sources */,
+				C529886D1D45E1F20058C829 /* DropView.swift in Sources */,
+				C52988681D45E1F20058C829 /* YALPageController.swift in Sources */,
+				C52988661D45E1F20058C829 /* Tween.swift in Sources */,
+				C52988631D45E1F20058C829 /* UIView+YALFrames.swift in Sources */,
 				5B6683721B94529400416AC3 /* AppDelegate.swift in Sources */,
-				5B5E00451BBD570E0030AF3D /* SlideLabel.swift in Sources */,
-				92CD79C01D365B29008B994F /* UILabel+Animation.swift in Sources */,
 				9280F85E1D3518A800C94508 /* UIColor+Extention.swift in Sources */,
+				C52988701D45E1F20058C829 /* SlideLabel.swift in Sources */,
+				C52988671D45E1F20058C829 /* UIPageViewController+YALPageController.swift in Sources */,
+				C52988611D45E1F20058C829 /* UILabel+Animation.swift in Sources */,
 				5B6683FF1B94604F00416AC3 /* СhartObject.swift in Sources */,
-				92CD79C11D365B29008B994F /* UIView+YALAppearance.swift in Sources */,
+				C52988601D45E1F20058C829 /* CAAnimationGroup+Sequence.swift in Sources */,
+				C52988621D45E1F20058C829 /* UIView+YALAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
