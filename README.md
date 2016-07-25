@@ -1,55 +1,55 @@
-EatFit
---------------
+# EatFit
 
 [![Yalantis](https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoupDemo/Resouces/badge_dark.png)](http://Yalantis.com/?utm_source=github)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Check this [article on our blog](https://yalantis.com/blog/eat-drink-track-how-we-created-eat-fit-animation-inspired-by-google-fit/). 
 
 ![Preview](https://yalantis.com/media/content/ckeditor/2015/09/30/charts-animation.gif)
 
-Purpose
---------------
+## Purpose
+
 Eat fit is a component for attractive data representation inspired by Google Fit. It is based on PageViewController, interface for customization is implemented in UITableViewDataSource style.
 
-Supported OS & SDK Versions
------------------------------
+## Supported OS & SDK Versions
 
 The component is implemented in Swift 2.0
 
 * Supported build target - iOS 9.0 (Xcode 7)
 
-
-ARC Compatibility
-------------------
+## ARC Compatibility
 
 EatFit requires ARC. 
 
-Thread Safety
---------------
+## Thread Safety
 
 EatFit is subclassed from UIView and - as with all UIKit components - it should only be accessed from the main thread. You may wish to use threads for loading or updating EatFit contents or items, but always ensure that once your content has loaded, you switch back to the main thread before updating the EatFit.
 
-Installation
---------------
+## Installation
+
+### Carhtage
+
+```ogdl
+github "Yalantis/EatFit" ~> 1.0
+```
+
+### Manual
 
 To install manually the EatFit component in an app, drag EatFit folder with all contents into your project. Use 
 EatFitViewController as any other view controller in your app. Setup is done via data source pattern. EatFitViewController's data source must adopt protocol EatFitViewControllerDataSource
 
+## Memory issues
 
-Memory issues
---------------
 Inside the component pages are reused just like cells in UITableView. There are no more than 3 pages exist in memory at any moment no matter how many pages the component shows.
 
-Properties
---------------
+## Properties
 
 The EatFit has following properties:
 ```swift
 	weak var dataSource: EatFitViewControllerDataSource!
 ```
 
-Methods
---------------
+## Methods
 
 The EatFitViewController class has the following methods:
 ```swift
@@ -57,8 +57,8 @@ The EatFitViewController class has the following methods:
 ```
 This reloads all the component from the dataSource and refreshes the display.
 
-Data source protocol
----------------
+## Data source protocol
+
 The EatFitViewControllerDataSource protocol has the following methods:
 ```swift
     func numberOfPagesForPagingViewController(controller: EatFitViewController) -> Int
@@ -90,22 +90,19 @@ Returns the image for specific page. Actual color of image doesn't matter, it wi
 ```
 Returns chart thickness in points. It is applied for all pages.
 
-Release Notes
-----------------
+## Release Notes
 
 Version 1.0
 
 - Release version.
  
-Let us know!
-----------------
+## Let us know!
 
 We’d be really happy if you send us links to your projects where you use our component. Just send an email to github@yalantis.com And do let us know if you have any questions or suggestion regarding the animation. 
 
 P.S. We’re going to publish more awesomeness wrapped in code and a tutorial on how to make UI for iOS (Android) better than better. Stay tuned!
 
-License
-----------------
+## License
 
     The MIT License (MIT)
 
