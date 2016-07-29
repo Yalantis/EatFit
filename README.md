@@ -34,7 +34,7 @@ EatFit is subclassed from UIView and - as with all UIKit components - it should 
 ### Carhtage
 
 ```ogdl
-github "Yalantis/EatFit" ~> 1.0
+github "Yalantis/EatFit" ~> 1.0.1
 ```
 
 ### Manual
@@ -100,6 +100,10 @@ Version 1.0
 
 - Release version.
  
+Version 1.0.1
+
+- Fix a crash #4
+
 ## Let us know!
 
 We’d be really happy if you send us links to your projects where you use our component. Just send an email to github@yalantis.com And do let us know if you have any questions or suggestion regarding the animation. 
