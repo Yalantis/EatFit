@@ -21,6 +21,10 @@ The component is implemented in Swift 2.0
 
 EatFit requires ARC. 
 
+## Supported orientations
+
+EatFit supports only portrait orientation.
+
 ## Thread Safety
 
 EatFit is subclassed from UIView and - as with all UIKit components - it should only be accessed from the main thread. You may wish to use threads for loading or updating EatFit contents or items, but always ensure that once your content has loaded, you switch back to the main thread before updating the EatFit.
