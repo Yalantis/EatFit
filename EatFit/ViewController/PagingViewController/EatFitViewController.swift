@@ -16,6 +16,15 @@ protocol EatFitViewControllerDataSource: class {
     func descriptionForPage(index: Int, forPagingViewController controller: EatFitViewController) -> String
     func logoForPage(index: Int, forPagingViewController controller: EatFitViewController) -> UIImage
     func chartThicknessForPagingViewController(controller: EatFitViewController) -> CGFloat
+    
+    func backgroundColorForPage(index: Int, forPagingViewController controller: EatFitViewController) -> UIColor
+}
+
+extension EatFitViewControllerDataSource {
+    
+    func backgroundColorForPage(index: Int, forPagingViewController controller: EatFitViewController) -> UIColor {
+        return .whiteColor()
+    }
 }
 
 class EatFitViewController : UIViewController {
@@ -59,6 +68,7 @@ class EatFitViewController : UIViewController {
         for idx in 0..<dataSource.numberOfPagesForPagingViewController(self) {
             let vc = EatFitSlideViewController(nibName:"EatFitSlideViewController", bundle: nil)
             vc.loadView()
+            vc.backgroundColor = dataSource.backgroundColorForPage(idx, forPagingViewController: self)
             vc.chartTitle = dataSource.titleForPage(idx, forPagingViewController: self)
             vc.chartColor = dataSource.chartColorForPage(idx, forPagingViewController: self)
             vc.chartDescription = dataSource.descriptionForPage(idx, forPagingViewController: self)

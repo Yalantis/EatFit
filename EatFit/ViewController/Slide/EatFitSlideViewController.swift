@@ -51,6 +51,12 @@ class EatFitSlideViewController: UIViewController {
         }
     }
     
+    var backgroundColor: UIColor = .whiteColor() {
+        didSet {
+            backgroundView.backgroundColor = backgroundColor
+        }
+    }
+    
     var percentage: Int = 0
     
     override func viewDidLoad() {
