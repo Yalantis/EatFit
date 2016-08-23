@@ -34,7 +34,7 @@ EatFit is subclassed from UIView and - as with all UIKit components - it should 
 ### Carhtage
 
 ```ogdl
-github "Yalantis/EatFit" ~> 1.0.1
+github "Yalantis/EatFit" ~> 1.1
 ```
 
 ### Manual
