@@ -13,9 +13,9 @@ Eat fit is a component for attractive data representation inspired by Google Fit
 
 ## Supported OS & SDK Versions
 
-The component is implemented in Swift 2.0
-
-* Supported build target - iOS 9.0 (Xcode 7)
+* Swift 2.3
+* iOS 9.0+ 
+* Xcode 8
 
 ## ARC Compatibility
 
@@ -33,8 +33,8 @@ EatFit is subclassed from UIView and - as with all UIKit components - it should 
 
 ### Carhtage
 
-```ogdl
-github "Yalantis/EatFit" ~> 1.1
+```
+github "Yalantis/EatFit" ~> 1.2
 ```
 
 ### Manual
@@ -93,16 +93,6 @@ Returns the image for specific page. Actual color of image doesn't matter, it wi
     func chartThicknessForPagingViewController(controller: EatFitViewController) -> CGFloat
 ```
 Returns chart thickness in points. It is applied for all pages.
-
-## Release Notes
-
-Version 1.0
-
-- Release version.
- 
-Version 1.0.1
-
-- Fix a crash #4
 
 ## Let us know!
 
