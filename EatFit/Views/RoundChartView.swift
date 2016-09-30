@@ -18,31 +18,31 @@ class RoundChartView : UIView {
     }
     let easeOut = CAMediaTimingFunction(controlPoints: 0, 0.4, 0.4, 1)
     
-    private let greyChart: CAShapeLayer = {
+    fileprivate let greyChart: CAShapeLayer = {
         let circle: CAShapeLayer = CAShapeLayer()
-        circle.position = CGPointZero
+        circle.position = CGPoint.zero
         circle.lineCap = kCALineCapRound
-        circle.fillColor = UIColor.clearColor().CGColor
-        circle.strokeColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor
+        circle.fillColor = UIColor.clear.cgColor
+        circle.strokeColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         circle.strokeEnd = 0
         return circle
         }()
     
-    private let colorChart: CAShapeLayer = {
+    fileprivate let colorChart: CAShapeLayer = {
         let circle: CAShapeLayer = CAShapeLayer()
-        circle.position = CGPointZero
+        circle.position = CGPoint.zero
         circle.lineCap = kCALineCapRound
-        circle.fillColor = UIColor.clearColor().CGColor
+        circle.fillColor = UIColor.clear.cgColor
         circle.strokeEnd = 0
-        circle.strokeColor = UIColor.redColor().CGColor
+        circle.strokeColor = UIColor.red.cgColor
         return circle
         }()
     
     var chartColor: UIColor {
         set {
-            colorChart.strokeColor = newValue.CGColor
+            colorChart.strokeColor = newValue.cgColor
         } get {
-            return UIColor(CGColor:colorChart.strokeColor!)
+            return UIColor(cgColor:colorChart.strokeColor!)
         }
     }
     
@@ -56,19 +56,19 @@ class RoundChartView : UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let path: CGPath = UIBezierPath(roundedRect: bounds, cornerRadius: frame.size.width / 2).CGPath
+        let path: CGPath = UIBezierPath(roundedRect: bounds, cornerRadius: frame.size.width / 2).cgPath
         colorChart.path = path
         greyChart.path = path
     }
     
     
-    func show(percentage percentage: Int, delay: NSTimeInterval) {
-        let showTime: NSTimeInterval = 0.8
+    func show(percentage: Int, delay: TimeInterval) {
+        let showTime: TimeInterval = 0.8
     
         let colorChartShow = animation(percentage, duration: 0.6, timingFunction: easeOut)
         colorChartShow.beginTime = delay
         
-        let splashDuration: NSTimeInterval = 0.2
+        let splashDuration: TimeInterval = 0.2
         let toValue: Int = min(100, percentage + 10)
         
         let splash: CABasicAnimation = animation(toValue, duration: splashDuration, timingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut))
@@ -81,9 +81,9 @@ class RoundChartView : UIView {
         colorGroup.duration = delay + colorChartShow.duration + showTime + splashDuration + colorHide.duration
         colorGroup.animations = [colorChartShow, splash, colorHide]
         colorGroup.fillMode = kCAFillModeForwards
-        colorGroup.removedOnCompletion = false
+        colorGroup.isRemovedOnCompletion = false
         
-        colorChart.addAnimation(colorGroup, forKey: "show")
+        colorChart.add(colorGroup, forKey: "show")
         
         let greyChartShow = animation(100, duration: 0.6, timingFunction:easeOut)
         greyChartShow.beginTime = colorChartShow.beginTime
@@ -95,7 +95,7 @@ class RoundChartView : UIView {
         greyGroup.animations = [greyChartShow, greyChartHide]
         greyGroup.duration = colorGroup.duration
         
-        greyChart.addAnimation(greyGroup, forKey: "show")
+        greyChart.add(greyGroup, forKey: "show")
     }
 
     func reset () {
@@ -103,14 +103,14 @@ class RoundChartView : UIView {
         greyChart.removeAllAnimations()
     }
 
-    func animation(percentage: Int, duration: NSTimeInterval, timingFunction:CAMediaTimingFunction) -> CABasicAnimation {
+    func animation(_ percentage: Int, duration: TimeInterval, timingFunction:CAMediaTimingFunction) -> CABasicAnimation {
         let maxValue: Float = Float(percentage) / 100
         let animation: CABasicAnimation = CABasicAnimation(keyPath:"strokeEnd")
         animation.duration = duration
         animation.repeatCount = 1
         animation.toValue = maxValue
         animation.fillMode = kCAFillModeForwards
-        animation.removedOnCompletion = false
+        animation.isRemovedOnCompletion = false
         animation.timingFunction = timingFunction
         
         return animation

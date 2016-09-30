@@ -10,7 +10,7 @@ import UIKit
 
 class EatFitPageControl: UIView {
 
-    private var buttons = [UIView]()
+    fileprivate var buttons = [UIView]()
     
     var pagesCount: Int = 0 {
         didSet {
@@ -18,7 +18,7 @@ class EatFitPageControl: UIView {
         }
     }
     
-    func selectButton(index:Int) {
+    func selectButton(_ index:Int) {
         if index > (buttons.count - 1) {
             return
         }
@@ -29,12 +29,12 @@ class EatFitPageControl: UIView {
         buttons[index].backgroundColor = UIColor(red: 50 / 255, green: 50 / 255, blue: 50 / 255, alpha: 1)
     }
     
-    private func layoutButtons () {
+    fileprivate func layoutButtons () {
         for button in buttons {
             button.removeFromSuperview()
         }
         
-        buttons.removeAll(keepCapacity: false)
+        buttons.removeAll(keepingCapacity: false)
         
         if pagesCount == 0 {
             return

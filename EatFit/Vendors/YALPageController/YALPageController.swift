@@ -7,8 +7,28 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
 
-typealias YALPageControllerTransitionHook = ((pageViewController: UIPageViewController, viewController: UIViewController, pageIndex: UInt) -> Void)
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
+
+typealias YALPageControllerTransitionHook = ((_ pageViewController: UIPageViewController, _ viewController: UIViewController, _ pageIndex: UInt) -> Void)
 
 class YALPageController: NSObject {
     
@@ -20,22 +40,22 @@ class YALPageController: NSObject {
     var pagingEnabled = true
     
     weak var pageViewController: UIPageViewController!
-    private weak var scrollView: UIScrollView!
+    fileprivate weak var scrollView: UIScrollView!
     
     
-    func showPage(index: UInt, animated: Bool) {
+    func showPage(_ index: UInt, animated: Bool) {
         showViewController(viewControllers[Int(index)], animated: animated)
         
-        if let pageViewController = pageViewController, firstControllers = viewControllers.first {
+        if let pageViewController = pageViewController, let firstControllers = viewControllers.first {
             didFinishTransition?(
-                pageViewController: pageViewController,
-                viewController: firstControllers,
-                pageIndex: index
+                pageViewController,
+                firstControllers,
+                index
             )
         }
     }
     
-    func showViewController(viewController: UIViewController, animated: Bool) {
+    func showViewController(_ viewController: UIViewController, animated: Bool) {
         guard let pageViewController = pageViewController else {
             return
         }
@@ -43,27 +63,27 @@ class YALPageController: NSObject {
             return
         }
         
-        let currentIndex = viewControllers.indexOf(lastViewController)
-        let index = viewControllers.indexOf(viewController)
+        let currentIndex = viewControllers.index(of: lastViewController)
+        let index = viewControllers.index(of: viewController)
         
         if currentIndex == index {
             return
         }
         
-        let direction: UIPageViewControllerNavigationDirection = index > currentIndex ? .Forward : .Reverse
+        let direction: UIPageViewControllerNavigationDirection = index > currentIndex ? .forward : .reverse
         pageViewController.setViewControllers(
             [viewController],
             direction: direction,
             animated: animated,
             completion: { _ in
                 if let _ = self.scrollView {
-                    self.scrollView.scrollEnabled = self.pagingEnabled
+                    self.scrollView.isScrollEnabled = self.pagingEnabled
                 }
             }
         )
     }
     
-    func setupViewControllers(viewControllers: [UIViewController]) {
+    func setupViewControllers(_ viewControllers: [UIViewController]) {
         self.viewControllers = viewControllers
         guard let pageViewController = pageViewController else {
             return
@@ -74,27 +94,27 @@ class YALPageController: NSObject {
         
         pageViewController.setViewControllers(
             [firstViewController],
-            direction: .Forward,
+            direction: .forward,
             animated: false,
             completion: nil
         )
         
-        guard let pageIndex = viewControllers.indexOf(firstViewController) else {
+        guard let pageIndex = viewControllers.index(of: firstViewController) else {
             return
         }
         
         didFinishTransition?(
-            pageViewController: pageViewController,
-            viewController: firstViewController,
-            pageIndex: UInt(pageIndex)
+            pageViewController,
+            firstViewController,
+            UInt(pageIndex)
         )
     }
     
-    func setupPageViewController(pageViewController: UIPageViewController) {
+    func setupPageViewController(_ pageViewController: UIPageViewController) {
         self.pageViewController = pageViewController
         
         self.pageViewController.view.subviews.forEach { view in
-            if view.isKindOfClass(UIScrollView.self) {
+            if view.isKind(of: UIScrollView.self) {
                 scrollView = view as! UIScrollView
             }
         }
@@ -102,10 +122,10 @@ class YALPageController: NSObject {
     
     // MARK: - Paging Enabled
     
-    private func setupPagingEnabled(pagingEnabled: Bool) {
+    fileprivate func setupPagingEnabled(_ pagingEnabled: Bool) {
         self.pagingEnabled = pagingEnabled
         if let _ = scrollView {
-            scrollView.scrollEnabled = pagingEnabled
+            scrollView.isScrollEnabled = pagingEnabled
         }
     }
     
@@ -113,8 +133,8 @@ class YALPageController: NSObject {
 
 extension YALPageController: UIPageViewControllerDataSource {
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        guard let index = viewControllers.indexOf(viewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let index = viewControllers.index(of: viewController) else {
             return nil
         }
         
@@ -126,8 +146,8 @@ extension YALPageController: UIPageViewControllerDataSource {
     }
     
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        guard let index = viewControllers.indexOf(viewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let index = viewControllers.index(of: viewController) else {
             return nil
         }
         
@@ -143,19 +163,19 @@ extension YALPageController: UIPageViewControllerDataSource {
 
 extension YALPageController: UIPageViewControllerDelegate {
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         if let _ = scrollView {
-            scrollView.pagingEnabled = pagingEnabled
+            scrollView.isPagingEnabled = pagingEnabled
         }
         
-        if let lastViewController = pageViewController.viewControllers?.last where lastViewController != previousViewControllers.last {
+        if let lastViewController = pageViewController.viewControllers?.last , lastViewController != previousViewControllers.last {
             
-            if let lastIndex = viewControllers.indexOf(lastViewController) {
+            if let lastIndex = viewControllers.index(of: lastViewController) {
                 didFinishTransition?(
-                    pageViewController: pageViewController,
-                    viewController: lastViewController,
-                    pageIndex: UInt(lastIndex)
+                    pageViewController,
+                    lastViewController,
+                    UInt(lastIndex)
                 )
             }
         }

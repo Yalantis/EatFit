@@ -9,21 +9,21 @@
 import UIKit
 
 protocol EatFitViewControllerDataSource: class {
-    func numberOfPagesForPagingViewController(controller: EatFitViewController) -> Int
-    func chartColorForPage(index: Int, forPagingViewController controller: EatFitViewController) -> UIColor
-    func percentageForPage(index: Int, forPagingViewController controller: EatFitViewController) -> Int
-    func titleForPage(index: Int, forPagingViewController controller: EatFitViewController) -> String
-    func descriptionForPage(index: Int, forPagingViewController controller: EatFitViewController) -> String
-    func logoForPage(index: Int, forPagingViewController controller: EatFitViewController) -> UIImage
-    func chartThicknessForPagingViewController(controller: EatFitViewController) -> CGFloat
+    func numberOfPagesForPagingViewController(_ controller: EatFitViewController) -> Int
+    func chartColorForPage(_ index: Int, forPagingViewController controller: EatFitViewController) -> UIColor
+    func percentageForPage(_ index: Int, forPagingViewController controller: EatFitViewController) -> Int
+    func titleForPage(_ index: Int, forPagingViewController controller: EatFitViewController) -> String
+    func descriptionForPage(_ index: Int, forPagingViewController controller: EatFitViewController) -> String
+    func logoForPage(_ index: Int, forPagingViewController controller: EatFitViewController) -> UIImage
+    func chartThicknessForPagingViewController(_ controller: EatFitViewController) -> CGFloat
     
-    func backgroundColorForPage(index: Int, forPagingViewController controller: EatFitViewController) -> UIColor
+    func backgroundColorForPage(_ index: Int, forPagingViewController controller: EatFitViewController) -> UIColor
 }
 
 extension EatFitViewControllerDataSource {
     
-    func backgroundColorForPage(index: Int, forPagingViewController controller: EatFitViewController) -> UIColor {
-        return .whiteColor()
+    func backgroundColorForPage(_ index: Int, forPagingViewController controller: EatFitViewController) -> UIColor {
+        return .white
     }
 }
 
@@ -36,8 +36,8 @@ class EatFitViewController : UIViewController {
     @IBOutlet
     weak var pageControl: EatFitPageControl!
     
-    private var pageViewController: UIPageViewController = {
-        let controller = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.Scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.Horizontal, options:nil)
+    fileprivate var pageViewController: UIPageViewController = {
+        let controller = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal, options:nil)
         
         return controller
     }()
@@ -49,7 +49,7 @@ class EatFitViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pageViewController.view.backgroundColor = UIColor.clearColor()
+        pageViewController.view.backgroundColor = UIColor.clear
         pageViewContainer.yal_addSubview(pageViewController.view, options: .Overlay)
         pageControl.pagesCount = dataSource.numberOfPagesForPagingViewController(self)
         pageControl.selectButton(0)

@@ -39,35 +39,40 @@ extension UIView {
     // MARK: - MOVE
     // MARK: absolute
     
-    func yal_setX(x: CGFloat) -> UIView {
+    @discardableResult
+    func yal_setX(_ x: CGFloat) -> UIView {
         var frame = self.frame
         frame.origin.x = x
         self.frame = frame
         return self
     }
     
-    func yal_setY(y: CGFloat) -> UIView {
+    @discardableResult
+    func yal_setY(_ y: CGFloat) -> UIView {
         var frame = self.frame
         frame.origin.y = y
         self.frame = frame
         return self
     }
     
-    func yal_setOrigin(origin: CGPoint) -> UIView {
+    @discardableResult
+    func yal_setOrigin(_ origin: CGPoint) -> UIView {
         var frame = self.frame
         frame.origin = origin
         self.frame = frame
         return self
     }
     
-    func yal_placeBottomAt(bottomY: CGFloat) -> UIView {
+    @discardableResult
+    func yal_placeBottomAt(_ bottomY: CGFloat) -> UIView {
         var frame = self.frame
         frame.origin.y = bottomY - self.frame.height
         self.frame = frame
         return self
     }
     
-    func yal_placeRightAt(rightX: CGFloat) -> UIView {
+    @discardableResult
+    func yal_placeRightAt(_ rightX: CGFloat) -> UIView {
         var frame = self.frame
         frame.origin.y = rightX - self.frame.width
         self.frame = frame
@@ -76,14 +81,16 @@ extension UIView {
     
     // MARK: offset
     
-    func yal_moveX(x: CGFloat) -> UIView {
+    @discardableResult
+    func yal_moveX(_ x: CGFloat) -> UIView {
         var frame = self.frame
         frame.origin.x += x
         self.frame = frame
         return self
     }
     
-    func yal_moveY(y: CGFloat) -> UIView {
+    @discardableResult
+    func yal_moveY(_ y: CGFloat) -> UIView {
         var frame = self.frame
         frame.origin.y += y
         self.frame = frame
@@ -93,28 +100,32 @@ extension UIView {
     // MARK: - CHANGE DIMENSIONS    
     // MARK: absolute
     
-    func yal_setWidth(width: CGFloat) -> UIView {
+    @discardableResult
+    func yal_setWidth(_ width: CGFloat) -> UIView {
         var frame = self.frame
         frame.size.width = width
         self.frame = frame
         return self
     }
     
-    func yal_setHeight(height: CGFloat) -> UIView {
+    @discardableResult
+    func yal_setHeight(_ height: CGFloat) -> UIView {
         var frame = self.frame
         frame.size.height = height
         self.frame = frame
         return self
     }
     
-    func yal_moveBottomEdgeTo(bottomY: CGFloat) -> UIView {
+    @discardableResult
+    func yal_moveBottomEdgeTo(_ bottomY: CGFloat) -> UIView {
         var frame = self.frame
         frame.size.height = bottomY - frame.origin.y
         self.frame = frame
         return self
     }
     
-    func yal_moveRightEdgeTo(rightX: CGFloat) -> UIView {
+    @discardableResult
+    func yal_moveRightEdgeTo(_ rightX: CGFloat) -> UIView {
         var frame = self.frame
         frame.size.width = rightX - frame.origin.x
         self.frame = frame
@@ -123,7 +134,8 @@ extension UIView {
     
     // MARK: - relative
     
-    func yal_trimTop(topOffset: CGFloat) -> UIView {
+    @discardableResult
+    func yal_trimTop(_ topOffset: CGFloat) -> UIView {
         var frame = self.frame
         frame.origin.y += topOffset
         frame.size.height -= topOffset
@@ -131,14 +143,16 @@ extension UIView {
         return self
     }
     
-    func yal_trimBottom(bottomOffset: CGFloat) -> UIView {
+    @discardableResult
+    func yal_trimBottom(_ bottomOffset: CGFloat) -> UIView {
         var frame = self.frame
         frame.size.height -= bottomOffset
         self.frame = frame
         return self
     }
     
-    func yal_trimLeft(leftOffset: CGFloat) -> UIView {
+    @discardableResult
+    func yal_trimLeft(_ leftOffset: CGFloat) -> UIView {
         var frame = self.frame
         frame.origin.x += leftOffset
         frame.size.width -= leftOffset
@@ -146,14 +160,16 @@ extension UIView {
         return self
     }
     
-    func yal_trimRight(rightOffset: CGFloat) -> UIView {
+    @discardableResult
+    func yal_trimRight(_ rightOffset: CGFloat) -> UIView {
         var frame = self.frame
         frame.size.width -= rightOffset
         self.frame = frame
         return self
     }
     
-    func yal_moveToCenterOf(view: UIView) -> UIView {
+    @discardableResult
+    func yal_moveToCenterOf(_ view: UIView) -> UIView {
         var frame = self.frame
         let center = view.center
         frame.origin.x = center.x - self.yal_width() / 2

@@ -19,7 +19,7 @@ extension CAAnimationGroup {
         }
     }
     
-    func chain(animations: [CABasicAnimation]) -> [CABasicAnimation] {
+    func chain(_ animations: [CABasicAnimation]) -> [CABasicAnimation] {
         for i in 0..<animations.count {
             if i == 0 {continue}
             chain(animations[i], previousAnimation: animations[i - 1])
@@ -27,7 +27,7 @@ extension CAAnimationGroup {
         return animations
     }
     
-    func chain (animation: CABasicAnimation, previousAnimation: CABasicAnimation) {
+    func chain (_ animation: CABasicAnimation, previousAnimation: CABasicAnimation) {
         animation.beginTime = previousAnimation.beginTime + previousAnimation.duration
         animation.fromValue = previousAnimation.toValue
     }

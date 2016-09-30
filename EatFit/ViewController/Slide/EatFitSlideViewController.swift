@@ -9,15 +9,15 @@
 import UIKit
 
 class EatFitSlideViewController: UIViewController {
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var descriptionView: SlideLabelView!
-    @IBOutlet private weak var percentageLabel: UILabel!
-    @IBOutlet private weak var backgroundView: UIView!
-    @IBOutlet private weak var chartView: RoundChartView!
-    @IBOutlet private weak var dropView: DropView!
-    @IBOutlet private weak var descriptionCenterConstraint: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var titleLabel: UILabel!
+    @IBOutlet fileprivate weak var descriptionView: SlideLabelView!
+    @IBOutlet fileprivate weak var percentageLabel: UILabel!
+    @IBOutlet fileprivate weak var backgroundView: UIView!
+    @IBOutlet fileprivate weak var chartView: RoundChartView!
+    @IBOutlet fileprivate weak var dropView: DropView!
+    @IBOutlet fileprivate weak var descriptionCenterConstraint: NSLayoutConstraint!
     
-    private var animationPlayed = false
+    fileprivate var animationPlayed = false
     
     var chartThickness: CGFloat = 0 {
         didSet {
@@ -26,7 +26,7 @@ class EatFitSlideViewController: UIViewController {
         }
     }
 
-    var chartColor: UIColor = UIColor.blueColor() {
+    var chartColor: UIColor = UIColor.blue {
         didSet {
             chartView.chartColor = chartColor
             dropView.color = chartColor
@@ -47,11 +47,11 @@ class EatFitSlideViewController: UIViewController {
     
     var logoImage: UIImage = UIImage() {
         didSet {
-           dropView.logo = logoImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+           dropView.logo = logoImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         }
     }
     
-    var backgroundColor: UIColor = .whiteColor() {
+    var backgroundColor: UIColor = .white {
         didSet {
             backgroundView.backgroundColor = backgroundColor
         }
@@ -77,14 +77,14 @@ class EatFitSlideViewController: UIViewController {
     }
 
 
-    func animatePercentageLabel (delay delay: NSTimeInterval) {
+    func animatePercentageLabel (delay: TimeInterval) {
         let tween = Tween(object: percentageLabel, key: "text", to: CGFloat(percentage))
 //        let tween = Tween(object: percentageLabel, key: "text", from: 0, to: 50, duration: 3)
 //        tween.timingFunction = CAMediaTimingFunction(controlPoints: 0, 0.4, 0.4, 1)
         tween.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        tween.mapper = { value in
-            return value == 0 ? "" : String(format: "%0.f%%", value)
-        }
+//        tween.mapper = { value in
+//            return value == 0 ? "" : String(format: "%0.f%%", value)
+//        }
 
         tween.start(delay: delay)
     }

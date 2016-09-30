@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class SlideLabelView: UIView {
-    private var label: UILabel = {
+    fileprivate var label: UILabel = {
        let label = UILabel()
-        label.textAlignment = NSTextAlignment.Center
+        label.textAlignment = NSTextAlignment.center
         label.numberOfLines = 0
-        label.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
         label.textColor = UIColor(red: 47/255, green: 49/255, blue: 49/255, alpha: 1)
         label.font = UIFont(name: "HelveticaNeue-Medium", size: 16)
         return label
@@ -32,7 +32,7 @@ class SlideLabelView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         addSubview(label)
-        label.hidden = true
+        label.isHidden = true
     }
     
     override func layoutSubviews() {
@@ -42,11 +42,11 @@ class SlideLabelView: UIView {
         label.yal_trimRight(40)
     }
     
-    func animate (delay delay: NSTimeInterval) {
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+    func animate (delay: TimeInterval) {
+        let time = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
 
-        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-            self.label.hidden = false
+        DispatchQueue.main.asyncAfter(deadline: time) { () -> Void in
+            self.label.isHidden = false
         }
 
         let labelShift: CABasicAnimation = CABasicAnimation(keyPath:"transform.translation.x")
@@ -55,7 +55,7 @@ class SlideLabelView: UIView {
         labelShift.fromValue = 50
         labelShift.toValue = 0
         labelShift.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
-        label.layer.addAnimation(labelShift, forKey: "shift")
+        label.layer.add(labelShift, forKey: "shift")
         
         label.animateAlpha(duration: 0.5, delay:delay)
     }
