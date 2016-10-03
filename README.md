@@ -31,7 +31,7 @@ EatFit is subclassed from UIView and - as with all UIKit components - it should 
 
 ## Installation
 
-### Carhtage
+### Carthage
 
 ```
 github "Yalantis/EatFit" ~> 1.2
