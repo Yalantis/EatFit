@@ -23,7 +23,7 @@ class Tween {
         }
     }
 
-    var mapper: ((_ value: CGFloat) -> (AnyObject))?
+    var mapper: ((CGFloat) -> Any)?
 
     init (object: UIView, key: String, from: CGFloat, to: CGFloat, duration: TimeInterval) {
         self.object = object
