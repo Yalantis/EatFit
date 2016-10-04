@@ -10,24 +10,26 @@ import Foundation
 import QuartzCore
 
 extension CAAnimationGroup {
-    convenience init(sequence: [CABasicAnimation]) {
+    
+    convenience init(of sequence: [CABasicAnimation]) {
         self.init()
-        self.animations = chain(sequence)
         
-        for animation in animations! {
+        let animations = chain(of: sequence)
+        for animation in animations {
             duration += animation.duration
         }
+        self.animations = animations
     }
     
-    func chain(animations: [CABasicAnimation]) -> [CABasicAnimation] {
+    func chain(of animations: [CABasicAnimation]) -> [CABasicAnimation] {
         for i in 0..<animations.count {
             if i == 0 {continue}
-            chain(animations[i], previousAnimation: animations[i - 1])
+            chain(from: animations[i], to: animations[i - 1])
         }
         return animations
     }
     
-    func chain (animation: CABasicAnimation, previousAnimation: CABasicAnimation) {
+    func chain(from animation: CABasicAnimation, to previousAnimation: CABasicAnimation) {
         animation.beginTime = previousAnimation.beginTime + previousAnimation.duration
         animation.fromValue = previousAnimation.toValue
     }

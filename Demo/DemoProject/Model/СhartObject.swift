@@ -9,6 +9,7 @@
 import UIKit
 
 struct ChartObject {
+    
     var color: UIColor
     var percentage: Int
     var title: String

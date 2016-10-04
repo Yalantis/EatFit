@@ -31,7 +31,7 @@ extension UIPageViewController {
         return controller!
     }
     
-    func yal_setViewControllers(viewControllers: [UIViewController]) {
+    func yal_setViewControllers(_ viewControllers: [UIViewController]) {
         yal_controller.setupViewControllers(viewControllers)
     }
     
@@ -39,27 +39,27 @@ extension UIPageViewController {
         return yal_controller.viewControllers
     }
 
-    func yal_showViewController(viewController: UIViewController) {
+    func yal_showViewController(_ viewController: UIViewController) {
         yal_controller.showViewController(viewController, animated: true)
     }
     
-    func yal_showViewController(viewController: UIViewController, animated: Bool) {
+    func yal_showViewController(_ viewController: UIViewController, animated: Bool) {
         yal_controller.showViewController(viewController, animated: animated)
     }
     
-    func yal_showPage(page: UInt, animated: Bool) {
+    func yal_showPage(_ page: Int, animated: Bool) {
         yal_controller.showPage(page, animated: animated)
     }
     
-    func yal_showPage(page: UInt) {
+    func yal_showPage(_ page: Int) {
         self.yal_showPage(page, animated: true)
     }
     
-    func yal_setDidFinishTransition(didFinishTransition: YALPageControllerTransitionHook) {
+    func yal_setDidFinishTransition(_ didFinishTransition: @escaping YALPageControllerTransitionHook) {
         yal_controller.didFinishTransition = didFinishTransition
     }
     
-    func yal_setPagingEnabled(enabled: Bool) {
+    func yal_setPagingEnabled(_ enabled: Bool) {
         yal_controller.pagingEnabled = enabled
     }
     

@@ -6,7 +6,6 @@
 //  Copyright © 2015 Konstantin Safronov. All rights reserved.
 //
 
-
 import UIKit
 
 extension UIColor {
@@ -14,7 +13,7 @@ extension UIColor {
     convenience init(hexString: String) {
         // String -> UInt32
         var rgbValue: UInt32 = 0
-        NSScanner(string: hexString).scanHexInt(&rgbValue)
+        Scanner(string: hexString).scanHexInt32(&rgbValue)
         
         // UInt32 -> R,G,B
         let red = CGFloat((rgbValue >> 16) & 0xff) / 255.0
@@ -23,5 +22,4 @@ extension UIColor {
         
         self.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
-    
 }
