@@ -47,11 +47,11 @@ extension UIPageViewController {
         yal_controller.showViewController(viewController, animated: animated)
     }
     
-    func yal_showPage(_ page: UInt, animated: Bool) {
+    func yal_showPage(_ page: Int, animated: Bool) {
         yal_controller.showPage(page, animated: animated)
     }
     
-    func yal_showPage(_ page: UInt) {
+    func yal_showPage(_ page: Int) {
         self.yal_showPage(page, animated: true)
     }
     

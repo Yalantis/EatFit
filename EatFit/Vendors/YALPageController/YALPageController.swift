@@ -28,7 +28,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 }
 
 
-typealias YALPageControllerTransitionHook = ((_ pageViewController: UIPageViewController, _ viewController: UIViewController, _ pageIndex: UInt) -> Void)
+typealias YALPageControllerTransitionHook = ((_ pageViewController: UIPageViewController, _ viewController: UIViewController, _ pageIndex: Int) -> Void)
 
 class YALPageController: NSObject {
     
@@ -43,7 +43,7 @@ class YALPageController: NSObject {
     fileprivate weak var scrollView: UIScrollView!
     
     
-    func showPage(_ index: UInt, animated: Bool) {
+    func showPage(_ index: Int, animated: Bool) {
         showViewController(viewControllers[Int(index)], animated: animated)
         
         if let pageViewController = pageViewController, let firstControllers = viewControllers.first {
@@ -106,7 +106,7 @@ class YALPageController: NSObject {
         didFinishTransition?(
             pageViewController,
             firstViewController,
-            UInt(pageIndex)
+            pageIndex
         )
     }
     
@@ -160,7 +160,6 @@ extension YALPageController: UIPageViewControllerDataSource {
     
 }
 
-
 extension YALPageController: UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
@@ -175,10 +174,9 @@ extension YALPageController: UIPageViewControllerDelegate {
                 didFinishTransition?(
                     pageViewController,
                     lastViewController,
-                    UInt(lastIndex)
+                    lastIndex
                 )
             }
         }
     }
-    
 }

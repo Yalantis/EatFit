@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Aleksey Chernish. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UILabel {
-    func animateAdding (_ duration: Double) {
+    
+    func animateAdding(_ duration: Double) {
         if let text = text {
             iterateAdding(text as NSString, index: 0, delay: duration / Double(text.characters.count))
         }
     }
     
-    fileprivate func iterateAdding (_ text: NSString, index: Int, delay: Double) {
+    fileprivate func iterateAdding(_ text: NSString, index: Int, delay: Double) {
         let substring = text.substring(to: index)
         self.text = substring
         
@@ -29,7 +29,7 @@ extension UILabel {
         }
     }
     
-    func animateAlpha (duration: Double, delay: Double) {
+    func animateAlpha(duration: Double, delay: Double) {
         if let text = text {
             
             let time = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
@@ -43,7 +43,7 @@ extension UILabel {
         }
     }
     
-    fileprivate func iterateAlpha (_ text: NSString, index: Int, delay: Double, font: UIFont, color: UIColor) {
+    fileprivate func iterateAlpha(_ text: NSString, index: Int, delay: Double, font: UIFont, color: UIColor) {
         let substringToShow = text.substring(to: index);
         let substringToHide = text.substring(from: index);
         

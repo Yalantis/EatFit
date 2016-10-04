@@ -10,16 +10,16 @@ import UIKit
 
 class EatFitPageControl: UIView {
 
-    fileprivate var buttons = [UIView]()
-    
     var pagesCount: Int = 0 {
         didSet {
             layoutButtons()
         }
     }
     
-    func selectButton(_ index:Int) {
-        if index > (buttons.count - 1) {
+    fileprivate var buttons: [UIView] = []
+    
+    func selectButton(at index:Int) {
+        if index > buttons.count - 1 {
             return
         }
         
@@ -29,11 +29,11 @@ class EatFitPageControl: UIView {
         buttons[index].backgroundColor = UIColor(red: 50 / 255, green: 50 / 255, blue: 50 / 255, alpha: 1)
     }
     
+    
     fileprivate func layoutButtons () {
         for button in buttons {
             button.removeFromSuperview()
         }
-        
         buttons.removeAll(keepingCapacity: false)
         
         if pagesCount == 0 {
@@ -42,9 +42,9 @@ class EatFitPageControl: UIView {
         
         let buttonWidth: CGFloat = 10
         let gapWidth: CGFloat = 8
-        let count: CGFloat = CGFloat(pagesCount)
-        let totalWidth: CGFloat = buttonWidth * count + gapWidth * (count - 1)
-        var startX: CGFloat = (frame.size.width - totalWidth) / 2
+        let count = CGFloat(pagesCount)
+        let totalWidth = buttonWidth * count + gapWidth * (count - 1)
+        var startX = (frame.width - totalWidth) / 2
         for i in 0..<pagesCount {
             let button = UIButton(frame: CGRect(x: startX, y: 0, width: buttonWidth, height: buttonWidth))
             button.backgroundColor = UIColor(red: 50 / 255, green: 50 / 255, blue: 50 / 255, alpha: 1)
@@ -54,7 +54,7 @@ class EatFitPageControl: UIView {
             self.addSubview(button)
             buttons.append(button)
             
-            startX += (buttonWidth + gapWidth)
+            startX += buttonWidth + gapWidth
         }
     }
 }

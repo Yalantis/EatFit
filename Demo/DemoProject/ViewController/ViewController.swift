@@ -10,22 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var eatFitController: EatFitViewController = EatFitViewController.controller()
+    let eatFitController = EatFitViewController()
     
     let objects: [ChartObject] = {
         var objects: [ChartObject] = []
         
         let filePath = Bundle.main.path(forResource: "Objects", ofType: "plist")
         let contents = NSArray(contentsOfFile: filePath!)! as Array
-        
+
         for dictionary in contents {
-            
             let color = UIColor(hexString: dictionary["color"] as! String)
             let percentage = dictionary["percentage"] as! Int
             let title = dictionary["title"] as! String
             let description = dictionary["description"] as! String
             let logoName = dictionary["logoName"] as! String
-            let object: ChartObject = ChartObject(color: color, percentage: percentage, title: title, description: description, logoImage: UIImage(named: logoName)!)
+            let logoImage = UIImage(named: logoName)!
+            let object = ChartObject(color: color, percentage: percentage, title: title, description: description, logoImage: logoImage)
             
             objects.append(object)
         }
@@ -38,8 +38,8 @@ class ViewController: UIViewController {
         
         eatFitController.dataSource = self
         eatFitController.view.frame = view.frame
-        self.addChildViewController(eatFitController)
-        self.view.yal_addSubview(eatFitController.view, options: .Overlay)
+        addChildViewController(eatFitController)
+        view.yal_addSubview(eatFitController.view, options: .overlay)
     }
 }
 

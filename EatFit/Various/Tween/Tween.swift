@@ -9,6 +9,7 @@
 import UIKit
 
 class Tween {
+    
     fileprivate weak var layer: TweenLayer!
 
     let object: UIView
@@ -50,12 +51,13 @@ class Tween {
     }
 
     func start(delay: TimeInterval) {
-        self.layer.delay = delay
+        layer.delay = delay
         start()
     }
 }
 
 extension Tween: TweenLayerDelegate {
+    
     func tweenLayer(_ layer: TweenLayer, didSetAnimatableProperty to: CGFloat) {
         if let mapper = mapper {
             object.setValue(mapper(to), forKey: key)
@@ -70,11 +72,13 @@ extension Tween: TweenLayerDelegate {
 }
 
 protocol TweenLayerDelegate: class {
+    
     func tweenLayer(_ layer: TweenLayer, didSetAnimatableProperty to: CGFloat) -> Void
     func tweenLayerDidStopAnimation(_ layer: TweenLayer) -> Void
 }
 
 class TweenLayer: CALayer {
+    
     @NSManaged fileprivate var animatableProperty: CGFloat
 
     var animationDelegate: TweenLayerDelegate?
@@ -122,4 +126,3 @@ extension TweenLayer: CAAnimationDelegate {
         animationDelegate?.tweenLayerDidStopAnimation(self)
     }
 }
-

@@ -6,51 +6,53 @@
 //  Copyright (c) 2015 Aleksey Chernish. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class RoundChartView : UIView {
+class RoundChartView: UIView {
+    
     var chartThickness: CGFloat = 0 {
         didSet {
             greyChart.lineWidth = chartThickness
             colorChart.lineWidth = chartThickness
         }
     }
+    
+    var chartColor: UIColor {
+        set {
+            colorChart.strokeColor = newValue.cgColor
+        }
+        get {
+            return UIColor(cgColor:colorChart.strokeColor!)
+        }
+    }
+    
     let easeOut = CAMediaTimingFunction(controlPoints: 0, 0.4, 0.4, 1)
     
     fileprivate let greyChart: CAShapeLayer = {
         let circle: CAShapeLayer = CAShapeLayer()
-        circle.position = CGPoint.zero
+        circle.position = .zero
         circle.lineCap = kCALineCapRound
         circle.fillColor = UIColor.clear.cgColor
         circle.strokeColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         circle.strokeEnd = 0
         return circle
-        }()
+    }()
     
     fileprivate let colorChart: CAShapeLayer = {
         let circle: CAShapeLayer = CAShapeLayer()
-        circle.position = CGPoint.zero
+        circle.position = .zero
         circle.lineCap = kCALineCapRound
         circle.fillColor = UIColor.clear.cgColor
         circle.strokeEnd = 0
         circle.strokeColor = UIColor.red.cgColor
         return circle
-        }()
-    
-    var chartColor: UIColor {
-        set {
-            colorChart.strokeColor = newValue.cgColor
-        } get {
-            return UIColor(cgColor:colorChart.strokeColor!)
-        }
-    }
-    
+    }()
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.layer.addSublayer(greyChart)
-        self.layer.addSublayer(colorChart)
+        layer.addSublayer(greyChart)
+        layer.addSublayer(colorChart)
     }
     
     override func layoutSubviews() {
@@ -60,21 +62,20 @@ class RoundChartView : UIView {
         colorChart.path = path
         greyChart.path = path
     }
-    
-    
+
     func show(percentage: Int, delay: TimeInterval) {
         let showTime: TimeInterval = 0.8
     
-        let colorChartShow = animation(percentage, duration: 0.6, timingFunction: easeOut)
+        let colorChartShow = animation(percentage: percentage, duration: 0.6, timingFunction: easeOut)
         colorChartShow.beginTime = delay
         
         let splashDuration: TimeInterval = 0.2
         let toValue: Int = min(100, percentage + 10)
         
-        let splash: CABasicAnimation = animation(toValue, duration: splashDuration, timingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut))
+        let splash: CABasicAnimation = animation(percentage: toValue, duration: splashDuration, timingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut))
         splash.beginTime = colorChartShow.beginTime + colorChartShow.duration + showTime
         
-        let colorHide: CABasicAnimation = animation(-1, duration: 0.3, timingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut))
+        let colorHide: CABasicAnimation = animation(percentage: -1, duration: 0.3, timingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut))
         colorHide.beginTime = splash.beginTime + splash.duration
         
         let colorGroup: CAAnimationGroup = CAAnimationGroup()
@@ -85,10 +86,10 @@ class RoundChartView : UIView {
         
         colorChart.add(colorGroup, forKey: "show")
         
-        let greyChartShow = animation(100, duration: 0.6, timingFunction:easeOut)
+        let greyChartShow = animation(percentage: 100, duration: 0.6, timingFunction:easeOut)
         greyChartShow.beginTime = colorChartShow.beginTime
         
-        let greyChartHide = animation(-1, duration: 0.3, timingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut));
+        let greyChartHide = animation(percentage: -1, duration: 0.3, timingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut));
         greyChartHide.beginTime = colorHide.beginTime
         
         let greyGroup: CAAnimationGroup = CAAnimationGroup()
@@ -103,12 +104,11 @@ class RoundChartView : UIView {
         greyChart.removeAllAnimations()
     }
 
-    func animation(_ percentage: Int, duration: TimeInterval, timingFunction:CAMediaTimingFunction) -> CABasicAnimation {
-        let maxValue: Float = Float(percentage) / 100
-        let animation: CABasicAnimation = CABasicAnimation(keyPath:"strokeEnd")
+    func animation(percentage: Int, duration: TimeInterval, timingFunction:CAMediaTimingFunction) -> CABasicAnimation {
+        let animation = CABasicAnimation(keyPath:"strokeEnd")
         animation.duration = duration
         animation.repeatCount = 1
-        animation.toValue = maxValue
+        animation.toValue = Float(percentage) / 100
         animation.fillMode = kCAFillModeForwards
         animation.isRemovedOnCompletion = false
         animation.timingFunction = timingFunction

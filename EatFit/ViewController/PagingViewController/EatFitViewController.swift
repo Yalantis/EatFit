@@ -9,6 +9,7 @@
 import UIKit
 
 protocol EatFitViewControllerDataSource: class {
+    
     func numberOfPagesForPagingViewController(_ controller: EatFitViewController) -> Int
     func chartColorForPage(_ index: Int, forPagingViewController controller: EatFitViewController) -> UIColor
     func percentageForPage(_ index: Int, forPagingViewController controller: EatFitViewController) -> Int
@@ -27,57 +28,47 @@ extension EatFitViewControllerDataSource {
     }
 }
 
-class EatFitViewController : UIViewController {
+class EatFitViewController: UIViewController {
+    
     weak var dataSource: EatFitViewControllerDataSource!
 
-    @IBOutlet
-    weak var pageViewContainer: UIView!
+    @IBOutlet weak var pageViewContainer: UIView!
+    @IBOutlet weak var pageControl: EatFitPageControl!
     
-    @IBOutlet
-    weak var pageControl: EatFitPageControl!
-    
-    fileprivate var pageViewController: UIPageViewController = {
-        let controller = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal, options:nil)
-        
-        return controller
-    }()
-    
-    class func controller() -> EatFitViewController {
-        return EatFitViewController(nibName: "EatFitViewController", bundle: nil)
-    }
+    fileprivate var pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pageViewController.view.backgroundColor = UIColor.clear
-        pageViewContainer.yal_addSubview(pageViewController.view, options: .Overlay)
+        pageViewController.view.backgroundColor = .clear
+        pageViewContainer.yal_addSubview(pageViewController.view, options: .overlay)
         pageControl.pagesCount = dataSource.numberOfPagesForPagingViewController(self)
-        pageControl.selectButton(0)
+        pageControl.selectButton(at: 0)
         reloadData()
     }
     
     func reloadData() {
-        pageViewController.yal_setDidFinishTransition({ (pageController, viewController, idx) -> Void in
-            self.pageControl.selectButton(Int(idx))
+        pageViewController.yal_setDidFinishTransition { pageController, viewController, index in
+            self.pageControl.selectButton(at: index)
             let slide = viewController as! EatFitSlideViewController
             slide.animate()
-        })
+        }
         
-        var pages: [UIViewController] = Array()
+        var pages = [UIViewController]()
         
-        for idx in 0..<dataSource.numberOfPagesForPagingViewController(self) {
-            let vc = EatFitSlideViewController(nibName:"EatFitSlideViewController", bundle: nil)
-            vc.loadView()
-            vc.backgroundColor = dataSource.backgroundColorForPage(idx, forPagingViewController: self)
-            vc.chartTitle = dataSource.titleForPage(idx, forPagingViewController: self)
-            vc.chartColor = dataSource.chartColorForPage(idx, forPagingViewController: self)
-            vc.chartDescription = dataSource.descriptionForPage(idx, forPagingViewController: self)
-            vc.percentage = dataSource.percentageForPage(idx, forPagingViewController: self)
-            vc.logoImage = dataSource.logoForPage(idx, forPagingViewController: self)
-            vc.chartThickness = dataSource.chartThicknessForPagingViewController(self)
-            pages.append(vc)
+        for index in 0..<dataSource.numberOfPagesForPagingViewController(self) {
+            let viewController = EatFitSlideViewController(nibName:"EatFitSlideViewController", bundle: nil)
+            viewController.loadView()
+            viewController.backgroundColor = dataSource.backgroundColorForPage(index, forPagingViewController: self)
+            viewController.chartTitle = dataSource.titleForPage(index, forPagingViewController: self)
+            viewController.chartColor = dataSource.chartColorForPage(index, forPagingViewController: self)
+            viewController.chartDescription = dataSource.descriptionForPage(index, forPagingViewController: self)
+            viewController.percentage = dataSource.percentageForPage(index, forPagingViewController: self)
+            viewController.logoImage = dataSource.logoForPage(index, forPagingViewController: self)
+            viewController.chartThickness = dataSource.chartThicknessForPagingViewController(self)
+            pages.append(viewController)
 
-            pageControl.selectButton(0)
+            pageControl.selectButton(at: 0)
             pageViewController.yal_setViewControllers(pages)
         }
     }

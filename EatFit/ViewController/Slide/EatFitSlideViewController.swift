@@ -9,15 +9,6 @@
 import UIKit
 
 class EatFitSlideViewController: UIViewController {
-    @IBOutlet fileprivate weak var titleLabel: UILabel!
-    @IBOutlet fileprivate weak var descriptionView: SlideLabelView!
-    @IBOutlet fileprivate weak var percentageLabel: UILabel!
-    @IBOutlet fileprivate weak var backgroundView: UIView!
-    @IBOutlet fileprivate weak var chartView: RoundChartView!
-    @IBOutlet fileprivate weak var dropView: DropView!
-    @IBOutlet fileprivate weak var descriptionCenterConstraint: NSLayoutConstraint!
-    
-    fileprivate var animationPlayed = false
     
     var chartThickness: CGFloat = 0 {
         didSet {
@@ -26,7 +17,7 @@ class EatFitSlideViewController: UIViewController {
         }
     }
 
-    var chartColor: UIColor = UIColor.blue {
+    var chartColor: UIColor = .blue {
         didSet {
             chartView.chartColor = chartColor
             dropView.color = chartColor
@@ -57,17 +48,28 @@ class EatFitSlideViewController: UIViewController {
         }
     }
     
-    var percentage: Int = 0
+    var percentage = 0
+    
+    @IBOutlet fileprivate weak var titleLabel: UILabel!
+    @IBOutlet fileprivate weak var descriptionView: SlideLabelView!
+    @IBOutlet fileprivate weak var percentageLabel: UILabel!
+    @IBOutlet fileprivate weak var backgroundView: UIView!
+    @IBOutlet fileprivate weak var chartView: RoundChartView!
+    @IBOutlet fileprivate weak var dropView: DropView!
+    @IBOutlet fileprivate weak var descriptionCenterConstraint: NSLayoutConstraint!
+    
+    fileprivate var animationPlayed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.layer.cornerRadius = chartThickness
-        self.view.layer.masksToBounds = true
+        view.layer.cornerRadius = chartThickness
+        view.layer.masksToBounds = true
     }
     
     func animate () {
-        if animationPlayed {return}
+        guard !animationPlayed else { return }
+        
         animationPlayed = true
         dropView.animateDrop(delay: 0)
         chartView.show(percentage: percentage, delay: 0.9)
@@ -75,7 +77,6 @@ class EatFitSlideViewController: UIViewController {
         descriptionView.animate(delay: 2.7)
         dropView.animateLogo(delay: 2.7)
     }
-
 
     func animatePercentageLabel (delay: TimeInterval) {
         let tween = Tween(object: percentageLabel, key: "text", to: CGFloat(percentage))
@@ -87,7 +88,3 @@ class EatFitSlideViewController: UIViewController {
         tween.start(delay: delay)
     }
 }
-
-
-
-
