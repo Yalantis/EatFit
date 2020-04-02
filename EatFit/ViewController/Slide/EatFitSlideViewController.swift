@@ -38,7 +38,7 @@ class EatFitSlideViewController: UIViewController {
     
     var logoImage: UIImage = UIImage() {
         didSet {
-           dropView.logo = logoImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+           dropView.logo = logoImage.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         }
     }
     
@@ -80,7 +80,7 @@ class EatFitSlideViewController: UIViewController {
 
     func animatePercentageLabel (delay: TimeInterval) {
         let tween = Tween(object: percentageLabel, key: "text", to: CGFloat(percentage))
-        tween.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        tween.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         tween.mapper = { value in
             return value == 0 ? "" : String(format: "%0.f%%", value)
         }

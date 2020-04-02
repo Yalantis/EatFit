@@ -55,7 +55,7 @@ class SlideLabelView: UIView {
             labelShift.duration = 0.7
             labelShift.fromValue = 50
             labelShift.toValue = 0
-            labelShift.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+            labelShift.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeOut)
             return labelShift
         }()
         label.layer.add(labelShift, forKey: "shift")

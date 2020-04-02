@@ -86,7 +86,7 @@ class TweenLayer: CALayer {
     var from: CGFloat = 0
     var to: CGFloat = 0
     var tweenDuration: TimeInterval = 0
-    var timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+    var timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
     var delay: TimeInterval = 0
 
     override class func needsDisplay(forKey event: String) -> Bool {

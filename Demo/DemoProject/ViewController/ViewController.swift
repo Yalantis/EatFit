@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         eatFitController.dataSource = self
         eatFitController.view.frame = view.frame
-        addChildViewController(eatFitController)
+        addChild(eatFitController)
         view.yal_addSubview(eatFitController.view, options: .overlay)
     }
 }

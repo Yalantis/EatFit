@@ -12,7 +12,7 @@ extension UILabel {
     
     func animateAdding(_ duration: Double) {
         if let text = text {
-            iterateAdding(text as NSString, index: 0, delay: duration / Double(text.characters.count))
+            iterateAdding(text as NSString, index: 0, delay: duration / Double(text.count))
         }
     }
     
@@ -38,7 +38,7 @@ extension UILabel {
             
             textColor = UIColor.clear
             DispatchQueue.main.asyncAfter(deadline: time) { () -> Void in
-                self.iterateAlpha(text as NSString, index: 0, delay: duration / Double(text.characters.count), font: self.font, color: originalFontColor!)
+                self.iterateAlpha(text as NSString, index: 0, delay: duration / Double(text.count), font: self.font, color: originalFontColor!)
             }
         }
     }
@@ -47,14 +47,14 @@ extension UILabel {
         let substringToShow = text.substring(to: index);
         let substringToHide = text.substring(from: index);
         
-        let showAttrs = [NSFontAttributeName: font,
-            NSForegroundColorAttributeName: color]
-        let showString = NSAttributedString(string: substringToShow, attributes: showAttrs)
+        let showAttrs = [convertFromNSAttributedStringKey(NSAttributedString.Key.font): font,
+            convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): color]
+        let showString = NSAttributedString(string: substringToShow, attributes: convertToOptionalNSAttributedStringKeyDictionary(showAttrs))
                 
-        let hideAttrs = [NSFontAttributeName: font,
-            NSForegroundColorAttributeName: UIColor.clear]
+        let hideAttrs = [convertFromNSAttributedStringKey(NSAttributedString.Key.font): font,
+            convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): UIColor.clear]
                 
-        let hideString = NSAttributedString(string: substringToHide, attributes: hideAttrs)
+        let hideString = NSAttributedString(string: substringToHide, attributes: convertToOptionalNSAttributedStringKeyDictionary(hideAttrs))
         
         let result = NSMutableAttributedString()
         result.append(showString)
@@ -62,7 +62,7 @@ extension UILabel {
                 
         self.attributedText = result
             
-        if substringToHide.characters.count != 0 {
+        if substringToHide.count != 0 {
             let time = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
 
             DispatchQueue.main.asyncAfter(deadline: time) { () -> Void in
@@ -70,4 +70,15 @@ extension UILabel {
             }
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }
