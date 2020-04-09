@@ -80,7 +80,7 @@ class DropView: UIView {
             let animation = CABasicAnimation(keyPath: "transform.translation.y")
             animation.duration = 0.05
             animation.toValue = dropFall.toValue
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
             return animation
         }()
                 
@@ -102,7 +102,7 @@ class DropView: UIView {
             animation.repeatCount = 1.0
             animation.fromValue = 1.0
             animation.toValue = 0.6
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
             animation.autoreverses = true
             animation.isRemovedOnCompletion = false
             return animation
@@ -122,10 +122,10 @@ class DropView: UIView {
             animation.repeatCount = 1.0
             animation.fromValue = 1.0
             animation.toValue = NSValue(caTransform3D: CATransform3DMakeScale(0.0, 0.0, 0.0))
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
             animation.autoreverses = false
             animation.isRemovedOnCompletion = false
-            animation.fillMode = kCAFillModeForwards
+            animation.fillMode = CAMediaTimingFillMode.forwards
             return animation
         }()
         
@@ -136,9 +136,9 @@ class DropView: UIView {
             animation.beginTime = CACurrentMediaTime() + delay
             animation.duration = dropDisappear.duration
             animation.toValue = 18.0
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
             animation.isRemovedOnCompletion = false
-            animation.fillMode = kCAFillModeForwards
+            animation.fillMode = CAMediaTimingFillMode.forwards
             return animation
         }()
         drop.add(dropMove, forKey: "moveDown")
@@ -150,10 +150,10 @@ class DropView: UIView {
             animation.repeatCount = 1.0
             animation.fromValue = NSValue(caTransform3D:CATransform3DMakeScale(0.0, 0.0, 0.0))
             animation.toValue = NSValue(caTransform3D:CATransform3DMakeScale(2.0, 2.0, 2.0))
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
             animation.autoreverses = false
             animation.isRemovedOnCompletion = false
-            animation.fillMode = kCAFillModeForwards
+            animation.fillMode = CAMediaTimingFillMode.forwards
             return animation
         }()
         logoImageView.layer.add(imageShow, forKey: "show")
@@ -163,9 +163,9 @@ class DropView: UIView {
             animation.beginTime = CACurrentMediaTime() + delay
             animation.duration = imageShow.duration
             animation.toValue = 18.0
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
             animation.isRemovedOnCompletion = false
-            animation.fillMode = kCAFillModeForwards
+            animation.fillMode = CAMediaTimingFillMode.forwards
             return animation
         }()
         logoImageView.layer.add(imageMove, forKey: "move")

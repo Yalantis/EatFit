@@ -63,14 +63,14 @@ class YALPageController: NSObject {
             return
         }
         
-        let currentIndex = viewControllers.index(of: lastViewController)
-        let index = viewControllers.index(of: viewController)
+        let currentIndex = viewControllers.firstIndex(of: lastViewController)
+        let index = viewControllers.firstIndex(of: viewController)
         
         if currentIndex == index {
             return
         }
         
-        let direction: UIPageViewControllerNavigationDirection = index > currentIndex ? .forward : .reverse
+        let direction: UIPageViewController.NavigationDirection = index > currentIndex ? .forward : .reverse
         pageViewController.setViewControllers(
             [viewController],
             direction: direction,
@@ -99,7 +99,7 @@ class YALPageController: NSObject {
             completion: nil
         )
         
-        guard let pageIndex = viewControllers.index(of: firstViewController) else {
+        guard let pageIndex = viewControllers.firstIndex(of: firstViewController) else {
             return
         }
         
@@ -114,8 +114,8 @@ class YALPageController: NSObject {
         self.pageViewController = pageViewController
         
         self.pageViewController.view.subviews.forEach { view in
-            if view.isKind(of: UIScrollView.self) {
-                scrollView = view as! UIScrollView
+            if let view = view as? UIScrollView {
+                scrollView = view
             }
         }
     }
@@ -134,7 +134,7 @@ class YALPageController: NSObject {
 extension YALPageController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = viewControllers.index(of: viewController) else {
+        guard let index = viewControllers.firstIndex(of: viewController) else {
             return nil
         }
         
@@ -147,7 +147,7 @@ extension YALPageController: UIPageViewControllerDataSource {
     
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = viewControllers.index(of: viewController) else {
+        guard let index = viewControllers.firstIndex(of: viewController) else {
             return nil
         }
         
@@ -170,7 +170,7 @@ extension YALPageController: UIPageViewControllerDelegate {
         
         if let lastViewController = pageViewController.viewControllers?.last , lastViewController != previousViewControllers.last {
             
-            if let lastIndex = viewControllers.index(of: lastViewController) {
+            if let lastIndex = viewControllers.firstIndex(of: lastViewController) {
                 didFinishTransition?(
                     pageViewController,
                     lastViewController,

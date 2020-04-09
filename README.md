@@ -13,9 +13,9 @@ Eat fit is a component for attractive data representation inspired by Google Fit
 
 ## Supported OS & SDK Versions
 
-* Swift 3
+* Swift 5
 * iOS 9.0+ 
-* Xcode 8
+* Xcode 11
 
 ## ARC Compatibility
 
@@ -34,7 +34,7 @@ EatFit is subclassed from UIView and - as with all UIKit components - it should 
 ### Carthage
 
 ```
-github "Yalantis/EatFit" ~> 2.0
+github "Yalantis/EatFit" ~> 3.0
 ```
 
 ### Manual
